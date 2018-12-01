@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>グローバルナビをスクロール時に固定する方法</title>
+
+<link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+$(function() {
+    var nav = $('#globalNavi'),
+    offset = nav.offset();
+    $(window).scroll(function () {
+      if($(window).scrollTop() > offset.top) {
+        nav.addClass('fixed');
+      } else {
+        nav.removeClass('fixed');
+      }
+    });
+});
+</script>
+
+</head>
+<body id="jq">
+<header>
+    <h1>グローバルナビをスクロール</h1>
+</header>
+
+<div class="main">MainImage</div>
+<div id="globalNavi">
+    <ul>
+        <li><a href="#">Menu1</a></li>
+        <li><a href="#">Menu2</a></li>
+        <li><a href="#">Menu3</a></li>
+        <li><a href="#">Menu4</a></li>
+        <li><a href="#">Menu5</a></li>
+    </ul>
+</div>
+
+<div class="contents">
+    <p>▼スクロールしてみてください。</p>
+</div>
+<div class="bottom">▲メニューが上部に固定されていますか？</div>
+<footer>
+    <h6>copyright &copy; 2018
+ morobrand reco All Right Reserved.</h6>
+</footer>
+
+</body>
+</html>
