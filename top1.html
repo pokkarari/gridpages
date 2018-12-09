@@ -72,7 +72,7 @@ $(function(){
 </section>
 
 <section class="top_banner">
-    <div>
+    <div class="top_blog">
         <h2>Blog</h2>
         <p>縁側でぽっからり</p>
     </div>
@@ -83,21 +83,26 @@ $(function(){
 </div>
 <!-- /.top_page -->
 
-
 <div class="contact">
-        <h2>お問い合わせ</h2>
-        <p>なんでもお寄せください</p>
-    <form>
-        <p>氏名　必須：<input type="text"></p>
-        <p>Email 必須：<input type="text"></p>
-        <p>問い合わせ内容　必須：一つお選びください
-            <select>
-                <option value="0">作品について</option>
-                <option value="1">商品について</option>
-                <option value="2">その他</option>
-            </select></p>
-        <p>内容 必須：<textarea cols="30" rows="10"></textarea></p>
-    </form>
+        <div class="contact_title">
+            <h2>お問い合わせ</h2>
+            <p>なんでもお寄せください</p>
+        </div>
+    <form class="contact_form">
+        <div class="contact_name">
+            <label for="name" required>氏名　必須：</label>
+            <input type="text" name="name">
+        </div>
+        <div>
+            <label for="email" required>Email 必須：</label>
+            <input type="email" name="email">
+        </div>
+        <div>
+            <label for="massese" required>内容 必須：</label>
+            <textarea cols="30" rows="10"></textarea>
+        </div>
+            <p><input type="submit" value="確認"></p>
+        </form>
 </div>
 <!-- /. contact -->
 
