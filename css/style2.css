@@ -158,22 +158,23 @@ body {
 
 /* セクション05 お問い合わせ 独立グリッド*/
 .contact {
-  width: 960px;
+  width: 100%;
+  max-width: 960px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 200px 1fr 200px;
-  grid-template-rows: auto 1fr 1fr 1fr;
-  grid-row-gap: 20px;
+  border: 1px solid #000;
 }
 
-.contact_title {
-  grid-column: 2 / 3;
-  grid-row: 1;
+.contact_title h2 {
+  background-color: #000;
+  border-radius: 5px;
 }
 
-.contact form {
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
+.contact_form th {
+  text-align: right;
+}
+
+.contact_name {
+  margin: 20px;
 }
 
 /*  */

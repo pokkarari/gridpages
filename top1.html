@@ -89,20 +89,29 @@ $(function(){
             <p>なんでもお寄せください</p>
         </div>
     <form class="contact_form">
-        <div class="contact_name">
-            <label for="name" required>氏名　必須：</label>
-            <input type="text" name="name">
-        </div>
-        <div>
-            <label for="email" required>Email 必須：</label>
-            <input type="email" name="email">
-        </div>
-        <div>
-            <label for="massese" required>内容 必須：</label>
-            <textarea cols="30" rows="10"></textarea>
-        </div>
-            <p><input type="submit" value="確認"></p>
-        </form>
+        <table>
+            <tr>
+                <th>お名前<span>（必須）</span></th>
+                <td><input type="text" maxlength="40" class="" name="" value=''><br></td>
+            </tr>
+            <tr>
+                <th class="last">メールアドレス<span>（必須）</span></th>
+                <td class="last"><input type="text" maxlength="250" class="" name="">
+                </td>
+            </tr>
+
+             <tr>
+                <th class="bg_green last">内容</th>
+                  <td class="last">
+                      <p><span class="red2">▼</span>500文字以内でご記入ください。</p>
+                      <textarea maxlength="500" class="" rows="7" name=""></textarea>
+                  </td>
+             </tr>
+        </table>
+        <p>いまいちど内容をご確認の上、「確認」ボタンを押してください。</p>
+         <p><input type="submit" value="確認"></p>
+    </form>
+
 </div>
 <!-- /. contact -->
 

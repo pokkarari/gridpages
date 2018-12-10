@@ -4,8 +4,19 @@ body  {margin: 0;
     font-family: 'メイリオ', Meiryo,'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif;
 }
 /* 基準色 */
-  $mainFontColor: #332d2b;
 
+  $baseblueColor: #B0D0DC; // 1うす水色（ロゴ色）
+  $greeColor: #92A4B0; // 2ベースカラー・ブルーグレー
+
+  $greenColor: #C5DF9C; //5 グリーン系
+
+  $pinkColor: #E0B6A9; // 10指し色のピンク系　赤ねこなどの鼻色
+
+  $mainFontColor: #332d2b; // 11こげ茶系
+  $konjyoColor: #192f60; // 12紺青
+
+  $softyelColor1: #FFFABE; // 13ソフト黄色ちょっとうすい色
+  $softyelColor2: #FFFDE6; // ソフト黄色よりうすい色
 
 /* 基本 */
 .wrap{
@@ -166,38 +177,24 @@ margin: 0 auto;
 
 /* セクション05 お問い合わせ 独立グリッド*/
 .contact {
-  width: 960px;
+  width: 100%;
+  max-width: 960px;
   margin: 0 auto;
-      // セクション05のグリッド
-    display: grid;
-    grid-template-columns: 200px 1fr 200px;
-    grid-template-rows: auto 1fr 1fr 1fr;
-    grid-row-gap: 20px;
+  border: 1px solid #000;
 }
 
-.contact_title {
-    grid-column:2 / 3;
-    grid-row: 1;
+.contact_title h2 {
+    background-color: #000;
+    border-radius: 5px;
 }
 
-.contact form {
-    grid-column:2 / 3;
-    grid-row: 2 / 3;
-//       // セクション05 formのグリッド
-//     grid-template-columns: 1fr;
-//     grid-template-rows: 1fr 1fr auto 1fr;
-// }
-// .contact_name {
-//     grid-column:2 / 3;
-//     grid-row: 3 / 4;
-// }
-// .contact_form label:nth-child(2){
-//     grid-column:2 / 3;
-//     grid-row: 3 / 4;
-// }
-// .contact_form div:nth-child(2){
-//     grid-column:2 / 3;
-//     grid-row: 4;
+.contact_form th{
+  text-align: right;
+}
+
+.contact_name {
+  margin: 20px;
+
 }
 
 /*  */
