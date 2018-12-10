@@ -39,25 +39,28 @@ margin: 0 auto;
     // セクション01のグリッド
     height: 700px;
     display: grid;
-    grid-template-columns: 3fr 1fr;
-    grid-template-rows: auto 1fr 2fr 1fr;
+    grid-template-columns: 4fr 2fr;
+    grid-template-rows: 2fr 1fr 2fr 100px;
 }
 
   .sec01_movei {
   grid-column: 1;
   grid-row: 1 / end;
-  border: 1px solid #000;
+  // border: 1px solid #000;
+  background-image: url(../images/top_images/yasuuri.jpg);
   }
   .sec01_wsm{
   grid-column: 2;
   grid-row: 1;
-  border: 1px solid #000;
+  // border: 1px solid #000;
+  background-image: url(../images/top_images/sec01_last.jpg);
   }
 
   .sec01_p{
   grid-column: 2;
   grid-row: 2;
-  border: 1px solid #000;
+  // border: 1px solid #000;
+  background-color: $baseblueColor;
   }
 
   .sec01_img01{
@@ -75,7 +78,7 @@ margin: 0 auto;
 
 
 
-/* セクション02 */
+/* セクションSNS */
 .top_sns {
   grid-column: 2 / -2;
   grid-row: 2;
@@ -106,7 +109,7 @@ margin: 0 auto;
 
 }
 
-/* セクション03 */
+/* セクション02 */
 .top_menu {
   grid-column: 2 / -2;
   grid-row: 3 / 5;
@@ -114,22 +117,26 @@ margin: 0 auto;
     height: 800px;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 200px 1fr 1fr;
+    grid-template-rows: 250px 1fr 1fr;
   }
 
   .top_news {
     grid-column: 1 / 8;
     grid-row: 1;
-    border: 1px solid #000;
+    // border: 1px solid #000;
+    background-image: url(../images/top_images/news_fish.jpg);
+
   }
 
   .top_about {
     grid-column:8 / end;
     grid-row: 1;
     border: 1px solid #000;
+    background-image: url(../images/top_images/about_daikoubutsu.jpg);
+
   }
 
-  .top_twitter {
+  .sec02_twitter {
     grid-column:1 / 4;
     grid-row: 2 / end;
     border: 1px solid #000;
@@ -138,22 +145,28 @@ margin: 0 auto;
     grid-column:4 / 7;
     grid-row: 2 / 3;
     border: 1px solid #000;
+    color: #fff;
+    background-color: $konjyoColor;
   }
   .sec02_img02 {
     grid-column:4 / 7;
     grid-row: 3 / 4;
     border: 1px solid #000;
+    background-image: url(../images/top_images/mado_suzume.jpg);
+    background-size: cover;
   }
 
-  .sec02_works {
+  .top_works {
     grid-column:7 / end;
     grid-row: 2 / 4;
-    border: 1px solid #000;
+    // border: 1px solid #000;
+    background-image: url(../images/top_images/works_winter.jpg);
+    background-size: cover;
   }
 
 
 
-/* セクション04 */
+/* セクション03 */
 .top_banner {
   grid-column: 2 / -2;
   grid-row: 5 / 6;
@@ -162,20 +175,25 @@ margin: 0 auto;
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: 50px 50px 1fr 50px 50px;
     grid-column-gap: 40px;
+    background-image: url(../images/top_images/);
 }
   .top_blog {
     grid-column:2 / 5;
     grid-row: 2 / 4;
-    border: 1px solid #000;
+    // border: 1px solid #000;
+    background-image: url(../images/top_images/blog_pencl.jpg);
+    background-size: cover;
   }
 
   .top_shop {
     grid-column:5 / 8;
     grid-row: 3 / 5;
-    border: 1px solid #000;
+    // border: 1px solid #000;
+    background-image: url(../images/top_images/shop_irassyai.jpg);
+    background-size: cover;
   }
 
-/* セクション05 お問い合わせ 独立グリッド*/
+/* セクション04 お問い合わせ 独立グリッド*/
 .contact {
   width: 100%;
   max-width: 960px;
@@ -184,8 +202,11 @@ margin: 0 auto;
 }
 
 .contact_title h2 {
-    background-color: #000;
-    border-radius: 5px;
+    background-color: $konjyoColor;
+    border-radius: 10px;
+    color: #fff;
+    margin: 20px;
+    padding: 15px;
 }
 
 .contact_form th{
