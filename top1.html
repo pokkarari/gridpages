@@ -47,6 +47,7 @@ $(function(){
             <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
             <li><a href="#"><i class="fab fa-instagram"></i></a></li>
         </ul>
+        <div class="sns_bg"></div>
 </section>
 
 <section class="top_menu">
@@ -57,62 +58,74 @@ $(function(){
         <h2>About</h2>
     </div>
     <div class="sec02_twitter">
-        <p>Twitterの情報画面</p>
-    </div>
-    <div class="sec02_img01">
-        <p>ここは色が入る？？たくさんの顔？</p>
-    </div>
-    <div class="sec02_img02">
-        <p>カフェの窓にいるスズメの絵</p>
+<!-- <a class="twitter-timeline" data-width="230" data-height="548" data-dnt="true" href="https://twitter.com/friekobo?ref_src=twsrc%5Etfw">Tweets by friekobo</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
+
     </div>
     <div class="top_works">
         <h2>Works</h2>
         <p>ここはWorksを入れる</p>
     </div>
+    <div class="sec02_schoolroom">
+        <div class="sec02_img01">
+            <p>蝋画のことを</p><p>知っている？</p>
+        </div>
+        <div class="sec02_img02">
+            <p>カフェの窓にいるスズメの絵</p>
+        </div>
+    </div>
 </section>
 
+
+
 <section class="top_banner">
-    <div class="top_blog">
-        <h2>Blog</h2>
-        <p>縁側でぽっからり</p>
-    </div>
-    <div class="top_shop">
-        <h2>Shop</h2>
-        <p>赤ねこのショップ</p>
-    </div>
+
+        <div class="top_blog">
+            <h2>Blog</h2>
+            <p>縁側でぽっからり</p>
+        </div>
+        <div class="top_shop">
+            <h2>Shop</h2>
+            <p>赤ねこのショップ</p>
+        </div>
 </section>
 </div>
 <!-- /.top_page -->
 
 <div class="contact">
         <div class="contact_title">
-            <h2>お問い合わせ</h2>
-            <p>なんでもお寄せください</p>
+            <h2>Contact お問い合わせ</h2>
+            <p>蝋画、猫キャラ、商品、このサイトのこと、なんでもご遠慮なくお寄せください。
+<br>また、ハンドメイドや猫関連イベントの出店募集の情報なども、お待ちしております。お仕事のご依頼も承っております。</p>
         </div>
     <form class="contact_form">
         <table>
             <tr>
-                <th>お名前<span>（必須）</span></th>
-                <td><input type="text" maxlength="40" class="" name="" value=''><br></td>
+                <th><label for="name">お名前
+                <span>（必須）</span></label></th>
+                <td><input type="text" maxlength="40" id="name"><br></td>
             </tr>
             <tr>
-                <th class="last">メールアドレス<span>（必須）</span></th>
-                <td class="last"><input type="text" maxlength="250" class="" name="">
+                <th><label for="email">メールアドレス<span>（必須）</span></label></th>
+                <td><input type="text" maxlength="250" id="email">
                 </td>
             </tr>
 
              <tr>
-                <th class="bg_green last">内容</th>
+                <th class="bg_green last"><label for="messeage">内容</label></th>
                   <td class="last">
                       <p><span class="red2">▼</span>500文字以内でご記入ください。</p>
-                      <textarea maxlength="500" class="" rows="7" name=""></textarea>
+                      <textarea maxlength="500" class="" rows="7" cols="25" id="message"></textarea>
                   </td>
              </tr>
         </table>
-        <p>いまいちど内容をご確認の上、「確認」ボタンを押してください。</p>
-         <p><input type="submit" value="確認"></p>
-    </form>
 
+        <div class="btn_contact">
+            <p>いまいちど内容をご確認の上、「確認」ボタンを押してください。</p>
+            <p><input type="submit" value="確認"></p>
+        </div>
+<!-- /. btn_contact -->
+    </form>
+<!-- contact_form -->
 </div>
 <!-- /. contact -->
 
