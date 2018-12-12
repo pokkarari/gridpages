@@ -23,11 +23,21 @@ body  {margin: 0;
 width: 1024px;
 margin: 0 auto;
 }
-// .top_page {
-//   background-size: cover;
-// }
-
-
+// 共通 各メニュータイトル用
+.menu_container {
+    position: relative;
+}
+.menu_title {
+    position: absolute;
+    top: 10px;
+    color: #fff;
+    // background-color: rgba(176,208,220,0.5);
+    padding: 10px;
+    h2 {
+    font-size: 2em;
+    text-align: left;
+    }
+}
 
 
 /* グリッド */
@@ -37,8 +47,8 @@ margin: 0 auto;
   grid-template-columns: 20px 2fr 1fr 20px;
   grid-template-rows: 700px 100px 800px 40px 400px;
   h2{
-    color: #fff;
-    font-size: 36px;
+    color: $mainFontColor;
+    font-size: 42px;
     padding: 10px 20px;
   }
 }
@@ -51,12 +61,12 @@ margin: 0 auto;
     height: 700px;
     display: grid;
     grid-template-columns: 4fr 2fr;
-    grid-template-rows: 2fr 1fr 2fr 100px;
+    grid-template-rows: 300px 1fr 1fr 1fr;
 }
 
   .sec01_movei {
   grid-column: 1;
-  grid-row: 1 / end;
+  grid-row: 1 / -1;
   border: 1px solid #000;
   background-image: url(../images/top_images/yasuuri.jpg);
   background-size: cover;
@@ -68,7 +78,8 @@ margin: 0 auto;
   // background-image: url(../images/top_images/sec01_last.jpg);
   // background-size: cover;
   img{
-    height: 300px;
+    width:100%;
+    height: 100%;
     object-fit: cover;
    }
   }
@@ -88,15 +99,19 @@ margin: 0 auto;
 
   .sec01_img02 {
   grid-column: 2;
-  grid-row: 4/ end;
+  grid-row: 4/ -1;
   border: 1px solid #000;
   background-size: cover;
+
   }
 
 
 
 
 /* セクションSNS */
+.sns_bg1{
+
+}
 .top_sns {
   grid-column: 2 / -2;
   grid-row: 2;
@@ -127,8 +142,8 @@ margin: 0 auto;
 }
 
 .sns_bg {
-  content: " ";
-  grid-column: 3 / end;
+  background-image: url(../images/top_images/aotomidori.jpg);
+  grid-column: 3 / -1;
   grid-row: 1;
   background-color: $softyelColor1;
   margin-left: 20px;
@@ -160,7 +175,7 @@ margin: 0 auto;
   }
 
   .top_about {
-    grid-column:8 / end;
+    grid-column:8 / -1;
     grid-row: 1;
     border: 1px solid #000;
     background-image: url(../images/top_images/about_daikoubutsu.jpg);
@@ -170,7 +185,7 @@ margin: 0 auto;
 
   .sec02_twitter {
     grid-column:1 / 4;
-    grid-row: 2 / end;
+    grid-row: 2 / -1;
     border: 1px solid #000;
   }
     .top_works {
@@ -181,39 +196,50 @@ margin: 0 auto;
     background-size: cover;
   }
   .sec02_schoolroom{
-    grid-column:10 / end;
+    grid-column:10 / -1;
     grid-row: 2 / 3;
     // 蝋画教室グリッド
       display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr 1fr;
+      grid-template-columns: repeat(2, 1fr) 56px;
+      grid-template-rows: repeat(6, 1fr);
+      img {
+      grid-column:1 / -1;
+      grid-row: 3 / 7;
+      width: 100%;
+      }
   }
       .sec02_img01 {
-      grid-column:1;
-      grid-row: 1 / 2;
+      grid-column:1 / -1;
+      grid-row: 1 / 4;
       border: 1px solid #000;
       color: #fff;
       background-color: $mainFontColor;
-        // 文字配列 グリッド
-          display: grid;
-          grid-template-columns: 1fr 1fr 1fr;
-          grid-template-rows: 1fr 2fr;
-          .sec02_img01 .sec02_schoolroom p:nth-child(1) {
-            grid-column: 1 / 4;
-            grid-row: 1;
-           }
-          .sec02_img01 .sec02_schoolroom p:nth-child(2) {
-            font-size: 2em;
-            grid-column: 3 / 4;
-            grid-row: 2 / 3;
-          }
     }
+        // 文字配列 蝋画のことを知っている？
+      .top_rouga1 {
+        grid-column: 1 / 4;
+        grid-row: 1;
+        display: block;
+        color: #fff;
+        font-size: 36px;
+        margin: 5px;
+       }
+    .top_rouga2 {
+        grid-column: 3;
+        grid-row: 2 / 4;
+        display: block;
+        color: #fff;
+        font-size: 36px;
+        margin: 5px;
+        writing-mode: vertical-rl;
+      }
+
     .sec02_img02 {
-      grid-column:1;
-      grid-row: 2 / 3;
+      grid-column:1 / -1;
+      grid-row: 4 / 7;
       border: 1px solid #000;
-      background-image: url(../images/top_images/mado_suzume.jpg);
-      background-size: cover;
+      background-color: #fff;
+
     }
 
 
@@ -226,44 +252,35 @@ margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: 50px 50px 350px 50px 50px;
-    grid-column-gap: 40px;
+    // grid-column-gap: 40px;
     background-color: $softyelColor1;
     margin: 0 -100px;
 }
 
-  .top_blog {
+.top_blog {
     grid-column:2 / 5;
     grid-row: 2 / 4;
-    // border: 1px solid #000;
-    // background-image: url(../images/top_images/blog_pencl.jpg);
-    // background-size: cover;
+    margin-right: 18px;
+    border: 2px solid $mainFontColor;
     img {
-      width: 400px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   }
-.top_blog {
-    position: relative;
-}
 
-.top_blog figcaption {
-    position: absolute;
-    top: 10px;
-    // max-width: 400px;
-    color: #fff;
-    // background-color: rgba(176,208,220,0.5);
-    padding: 10px;
-    h2{
-    font-size: 2em;
-    text-align: left;
-        }
-
-}
   .top_shop {
     grid-column:5 / 8;
     grid-row: 3 / 5;
-    // border: 1px solid #000;
-    background-image: url(../images/top_images/shop_irassyai.jpg);
-    background-size: cover;
+    margin-left: 18px;
+    border: 2px solid $mainFontColor;
+    // background-image: url(../images/top_images/shop_irassyai.jpg);
+    // background-size: cover;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 
 /* セクション04 お問い合わせ 独立グリッド*/
