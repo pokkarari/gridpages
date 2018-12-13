@@ -1,4 +1,18 @@
 @charset "utf-8";
+/* 基準色 */
+
+  $baseblueColor: #B0D0DC; // 1うす水色（ロゴ色）
+  $greeColor: #92A4B0; // 2ベースカラー・ブルーグレー
+
+  $greenColor: #C5DF9C; //5 グリーン系
+
+  $pinkColor: #E0B6A9; // 10指し色のピンク系　赤ねこなどの鼻色
+
+  $mainFontColor: #332d2b; // 11こげ茶系
+  $konjyoColor: #192f60; // 12紺青
+
+  $softyelColor1: #FFFABE; // 13ソフト黄色ちょっとうすい色
+  $softyelColor2: #FFFDE6; // ソフト黄色よりうすい色
 
 body  {margin: 0;
     font-family: 'メイリオ', Meiryo,'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif}
@@ -13,9 +27,9 @@ body  {margin: 0;
     vertical-align: bottom;
 }
 
-// .page-nav, .page-btn-close{
-//     display: none;
-// }
+.page-nav, .page-btn-close{
+    display: none;
+}
 
 //グリッド
 .page {
@@ -106,48 +120,65 @@ body  {margin: 0;
 }
 
 /* ####### 画面の横幅が1260px以上 ###### */
-@media(min-width: 1260px) {
-    .page {
-        grid-template-columns: 20px repeat(6,1fr) 20px;
-        grid-template-rows: 50px 50px 20px 1fr;
-    }
-    /* メインコンテンツ */
-    .page-main {
-        grid-colmun: 1;
-        grid-row: 3;
-    }
+@media (min-width: 1260px) {
+  .page {
+    grid-template-columns: 20px 1fr 20px;
+    grid-template-rows: 50px 50px 20px 1fr 100px 50px;
+  }
 
-    /* ヘッダー */
-    .page-head{
-        grid-colmun: 1;
-        grid-row: 3/ 5;
-    }
-    .page-head img {
-        width: 150px;
-    }
-    /* ナビゲーション */
-    .page-nav ul{
-        color: #222;
-        background-color: #222;
-    }
-    .page-nav li:nth-child(1) {
-        color: #222;
-        grid-colmun: 2;
-        grid-row: 2/ 3;
-        display: block;
-        }
+  /* メインコンテンツ */
+  .page-main {
+/*    background-color: pink;*/
+    grid-column: 1 / -1;
+    grid-row: 4 / 5;
+  }
 
+  /* ヘッダー */
+  .page-head {
+/*    background-color: lightblue;*/
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+  }
 
+  .page-head img {
+    grid-column: 1;
+    grid-row: 1 / 3;
+    width: 35px;
+  }
 
-    /* ボタン */
-    .page-btn {
-        display: none;
-    }
-    /* フッター */
-    .page-foot {
-        padding: 40px 0;
-    }
+  /* ナビゲーション */
+  .page-nav {
+    display: block;
+    background-color: #FFFABE;
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+  }
+  .page-nav ul {
+    display:grid;
+    grid-gap: 10px;
+    color: #222;
+    grid-auto-flow: column;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+
+  }
+
+  .page-nav a {
+    margin: 0;
+    margin-top: 10px;
+    color: #000;
+    border: none;
+  }
+
+  /* ボタン */
+  .page-btn {
+    display: none;
+  }
+
+  /* フッター */
+  .page-foot {
+    grid-column: 1 / -1;
+    grid-row: 5 / end;
+    padding: 40px 0;
+  }
 }
-
-
-
