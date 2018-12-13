@@ -18,10 +18,19 @@ $(function(){
 });
 </script>
 </head>
-<body id="top_top">
+
+<header class="page-head">
+    <a href="#">
+        <img src="images/logo.svg" alt="ウォネとその他の皆さん">
+    </a>
+</header>
+
+
+<body class="page" >
 <main>
 <div class="wrap">
 <div class="top_page">
+
 <section class="top_hero">
     <div class="sec01_movei img_fitcover">
         <h1>エフリエこうぼう</h1>
@@ -177,7 +186,16 @@ $(function(){
     </figcaption>
 </figure>
 
+<footer class="page-foot">
+    <p>copyright (c)2018 Whone to Sonohokano Minasan</p>
+</footer>
 
+
+<script>
+function myFunc() {
+    document.querySelector('.page').classList.toggle('open');
+}
+</script>
 
 </body>
 </html>

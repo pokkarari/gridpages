@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>メニューテスト</title>
+<meta name="viewport" content="width=device-width">
+
+<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="css/nav_test02.css">
+</head>
+<body class="page">
+
+<header class="page-head">
+    <a href="#">エフリエこうぼう
+        <img src="images/logo.svg" alt="エフリエこうぼう">
+    </a>
+    <ul>
+      <li>Contact</li>
+    </ul>
+</header>
+<nav class="page-nav">
+    <ul>
+        <li .nav_logo><a href="#">logo</a></li>
+        <li><a href="#">Top</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Shop</a></li>
+    </ul>
+</nav>
+
+<main class="page-main">
+</main>
+
+
+
+<button type="button" class="page-btn" onclick="myFunc()">
+    <span class="fas fa-bars" title="メニューを開く"></span>
+</button>
+
+<button type="button" class="page-btn-close" onclick="myFunc()">
+    <span class="fas fa-times" title="メニューを閉じる"></span>
+</button>
+
+<footer class="page-foot">
+    <p>copyright (c)2018 Whone to Sonohokano Minasan</p>
+</footer>
+
+
+<script>
+function myFunc() {
+    document.querySelector('.page').classList.toggle('open');
+}
+</script>
+
+</body>
+</html>
