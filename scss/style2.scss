@@ -34,16 +34,20 @@ margin: 0 auto;
 .menu_title {
     position: absolute;
     top: 10px;
-    color: #fff;
+    color: $mainFontColor;
     // background-color: rgba(176,208,220,0.5);
     padding: 10px;
   h2{
+    z-index: 10;
     margin:0;
     color: $mainFontColor;
     font-size: 42px;
     padding: 10px;
     // background-color: $baseblueColor;
-    border-bottom: 5px solid $baseblueColor;
+    border-bottom: 10px solid $baseblueColor;
+  }
+  p {
+    color: #fff;
   }
 }
 
@@ -63,6 +67,54 @@ overflow: hidden; /*拡大時にはみ出た部分を隠す*/
       height: 100%;
       object-fit: cover;
     }
+}
+
+// 共通　top で画像類にhover幕をかける
+.hover-parent1 {
+    overflow: hidden; /*拡大時にはみ出た部分を隠す*/
+  width: 400px;  /*画像の幅*/
+  height: 400px;  /*画像の高さ*/
+  position: relative;
+  margin-bottom: 30px;
+  img {
+    display: block;
+    transition-duration: 0.3s;  /*変化に掛かる時間*/
+  }
+}
+.hover-parent1 img:hover {
+  transform: scale(1.1);  /*画像の拡大率*/
+  transition-duration: 0.3s;  /*変化に掛かる時間*/
+}
+
+.hover-mask1 {
+  // border-radius: 50%;
+  width: 400px;
+  height: 200px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(176,208,220,0.2);
+  opacity: 0;
+  color: $mainFontColor;
+  // display: flex;
+  align-items: left;
+  text-align: left;
+  padding: 30px;
+}
+
+.hover-mask1 {
+  opacity: 1;
+  transition:all 0.2s ease;
+  left: -100%;
+  p{
+    display: block;
+  margin-left: 0;
+  }
+}
+.hover-parent1:hover .hover-mask1 {
+  left: 0;
 }
 /*--------------------------------------*/
 
@@ -163,8 +215,8 @@ overflow: hidden; /*拡大時にはみ出た部分を隠す*/
   img {
       width: 34px;
   }
-  background-image: url(../images/top_images/fuwa.jpg);
-  margin: -100px;
+  // background-image: url(../images/top_images/fuwa.jpg);
+  // margin: -100px;
   // width: 100%;
   // height: 100%;
   // object-fit: cover;
@@ -187,7 +239,7 @@ overflow: hidden; /*拡大時にはみ出た部分を隠す*/
 .top_menu {
   grid-column: 2 / -2;
   grid-row: 3 / 5;
-      // セクション03のグリッド
+      // セクション02のグリッド
     height: 800px;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -197,11 +249,55 @@ overflow: hidden; /*拡大時にはみ出た部分を隠す*/
   .top_news {
     grid-column: 1 / 8;
     grid-row: 1;
-    // border: 1px solid #000;
+    border: 1px solid #000;
     background-image: url(../images/top_images/news_fish.jpg);
-    background-size: cover;
-
-  }
+    background-size: fixed;
+    // ニュース内　グリッド
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    grid-template-rows: auto 1fr auto;
+    grid-rows-gap: 10px;
+    h2 {
+      display: block;
+      grid-column:1;
+      grid-row: 1;
+      background-color: $baseblueColor;
+      width: 120px;
+      padding: 10px;
+      margin: 0;
+    }
+    ul {
+      grid-column: 1 / 4;
+      grid-row: 2 / 3;
+      font-size: 14px;
+      list-style-type: none;
+      padding:10px 25px;
+      line-height: 1.5em;
+      margin: 0;
+        li {
+          padding: 5px;
+          // border-bottom: 1px solid #000;
+        }
+        span {
+          font-weight: bold;
+          background-color: $greenColor;
+        }
+    }
+}
+.btn_more {
+      display: grid;
+      grid-column: 3 / 4;
+      grid-row: 3 / 4;
+      text-decoration: none;
+      text-align:center;
+      color: $mainFontColor;
+      margin: 10px;
+      padding:0;
+      border: 1px solid $mainFontColor;
+      border-radius: 12px;
+      padding:5px;
+      width: 150px;
+    }
 
   .top_about {
     grid-column:8 / -1;
@@ -240,7 +336,7 @@ overflow: hidden; /*拡大時にはみ出た部分を隠す*/
       grid-row: 1 / 4;
       border: 1px solid #000;
       color: #fff;
-      background-color: $mainFontColor;
+      background-color: $baseblueColor;
     }
         // 文字配列 蝋画のことを知っている？
       .top_rouga1 {
@@ -443,7 +539,7 @@ figure.hover-parent img:hover {
 }
 
 figcaption.hover-mask {
-  border-radius: 50%;
+  // border-radius: 50%;
   width: 400px;
   height: 400px;
   position: absolute;
@@ -462,8 +558,8 @@ figcaption.hover-mask {
 
 figcaption.hover-mask {
   opacity: 1;
-  transition:all 0.5s ease;
-  top: -100%;
+  transition:all 0.2s ease;
+
   left: -100%;
   p{
     display: block;
@@ -471,14 +567,24 @@ figcaption.hover-mask {
   }
 }
 figure.hover-parent:hover .hover-mask {
-    top: -50%;
-  left: -50%;
+
+  left: 0;
 }
 
 
 
 
-/*  */
+/* 点灯テスト */
+/* 点滅 */
+.blinking{
+    animation:blink 1.2s ease-in-out infinite alternate;
+}
+
+@keyframes blink{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
 /*  */
 /*  */
 /*  */

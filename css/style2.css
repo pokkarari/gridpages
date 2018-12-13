@@ -21,15 +21,19 @@ body {
 .menu_title {
   position: absolute;
   top: 10px;
-  color: #fff;
+  color: #332d2b;
   padding: 10px;
 }
 .menu_title h2 {
+  z-index: 10;
   margin: 0;
   color: #332d2b;
   font-size: 42px;
   padding: 10px;
-  border-bottom: 5px solid #B0D0DC;
+  border-bottom: 10px solid #B0D0DC;
+}
+.menu_title p {
+  color: #fff;
 }
 
 .imgUp {
@@ -48,6 +52,59 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.hover-parent1 {
+  overflow: hidden;
+  /*拡大時にはみ出た部分を隠す*/
+  width: 400px;
+  /*画像の幅*/
+  height: 400px;
+  /*画像の高さ*/
+  position: relative;
+  margin-bottom: 30px;
+}
+.hover-parent1 img {
+  display: block;
+  transition-duration: 0.3s;
+  /*変化に掛かる時間*/
+}
+
+.hover-parent1 img:hover {
+  transform: scale(1.1);
+  /*画像の拡大率*/
+  transition-duration: 0.3s;
+  /*変化に掛かる時間*/
+}
+
+.hover-mask1 {
+  width: 400px;
+  height: 200px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(176, 208, 220, 0.2);
+  opacity: 0;
+  color: #332d2b;
+  align-items: left;
+  text-align: left;
+  padding: 30px;
+}
+
+.hover-mask1 {
+  opacity: 1;
+  transition: all 0.2s ease;
+  left: -100%;
+}
+.hover-mask1 p {
+  display: block;
+  margin-left: 0;
+}
+
+.hover-parent1:hover .hover-mask1 {
+  left: 0;
 }
 
 /*--------------------------------------*/
@@ -138,8 +195,6 @@ body {
 .sns_bg1 {
   grid-column: 1 / -1;
   grid-row: 1;
-  background-image: url(../images/top_images/fuwa.jpg);
-  margin: -100px;
 }
 .sns_bg1 img {
   width: 34px;
@@ -158,8 +213,53 @@ body {
 .top_news {
   grid-column: 1 / 8;
   grid-row: 1;
+  border: 1px solid #000;
   background-image: url(../images/top_images/news_fish.jpg);
-  background-size: cover;
+  background-size: fixed;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  grid-template-rows: auto 1fr auto;
+  grid-rows-gap: 10px;
+}
+.top_news h2 {
+  display: block;
+  grid-column: 1;
+  grid-row: 1;
+  background-color: #B0D0DC;
+  width: 120px;
+  padding: 10px;
+  margin: 0;
+}
+.top_news ul {
+  grid-column: 1 / 4;
+  grid-row: 2 / 3;
+  font-size: 14px;
+  list-style-type: none;
+  padding: 10px 25px;
+  line-height: 1.5em;
+  margin: 0;
+}
+.top_news ul li {
+  padding: 5px;
+}
+.top_news ul span {
+  font-weight: bold;
+  background-color: #C5DF9C;
+}
+
+.btn_more {
+  display: grid;
+  grid-column: 3 / 4;
+  grid-row: 3 / 4;
+  text-decoration: none;
+  text-align: center;
+  color: #332d2b;
+  margin: 10px;
+  padding: 0;
+  border: 1px solid #332d2b;
+  border-radius: 12px;
+  padding: 5px;
+  width: 150px;
 }
 
 .top_about {
@@ -199,7 +299,7 @@ body {
   grid-row: 1 / 4;
   border: 1px solid #000;
   color: #fff;
-  background-color: #332d2b;
+  background-color: #B0D0DC;
 }
 
 .top_rouga1 {
@@ -401,7 +501,6 @@ figure.hover-parent img:hover {
 }
 
 figcaption.hover-mask {
-  border-radius: 50%;
   width: 400px;
   height: 400px;
   position: absolute;
@@ -419,8 +518,7 @@ figcaption.hover-mask {
 
 figcaption.hover-mask {
   opacity: 1;
-  transition: all 0.5s ease;
-  top: -100%;
+  transition: all 0.2s ease;
   left: -100%;
 }
 figcaption.hover-mask p {
@@ -429,11 +527,23 @@ figcaption.hover-mask p {
 }
 
 figure.hover-parent:hover .hover-mask {
-  top: -50%;
-  left: -50%;
+  left: 0;
 }
 
-/*  */
+/* 点灯テスト */
+/* 点滅 */
+.blinking {
+  animation: blink 1.2s ease-in-out infinite alternate;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /*  */
 /*  */
 /*  */
