@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width">
+<title>Works|ろう画と猫のウォネとハンドメイド　エフリエこうぼう</title>
+<meta name="description" content="エフリエこうぼうは、">
+<!-- <meta name="keywords" content="ろう画,蝋画,ウォネとその他の皆さん,ハンドメイド,イラストレーション"> -->
+<link rel="icon" href="favicon.ico"><!-- ファビコン -->
+<link href="css/sanitize.css" rel="stylesheet">
+<link rel="stylesheet" href="css/nav01.css">
+<link rel="stylesheet" href="css/gallery.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+<script type="text/javascript">
+$(function(){
+
+});
+</script>
+</head>
+<body class="page">
+
+<header class="page-head">
+    <a href="#">エフリエこうぼう
+        <img src="images/logo.svg" alt="エフリエこうぼう">
+    </a>
+<!--     <ul>
+      <li>Contact</li>
+    </ul> -->
+</header>
+<nav class="page-nav">
+    <ul >
+        <li class="nav_logo"><a href="#"><img src="images/logo.svg" alt="エフリエこうぼう" width="36"></a></li>
+        <li><a href="#">Top</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Works</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Shop</a></li>
+    </ul>
+</nav>
+
+<main class="page-main">
+    <!-- ロード中に表示する内容 -->
+<div id="loading">
+  <p class="btn btn-default btn-lg">
+    <i class="zmdi zmdi-rotate-right zmdi-hc-spin"></i>
+  </p>
+</div>
+
+<!-- ロードが終了してから表示する内容 -->
+<div class="wrap">
+<div class="Works_title">
+    <h2>works</h2>
+    <p>これまでの制作活動をご紹介</p>
+</div>
+<article class="gallary_title">
+    <h2>Gallary ギャラリー</h2>
+ </article>
+<section>
+    <ul id="gallery" >
+      <li class="item"><img src="images/gallery/akaneko_kifujin.jpg""></li>
+      <li class="item"><img src="images/gallery/akaneko_kifujin.jpg""></li>
+      <li class="item"><img src="images/gallery/akaneko_kifujin.jpg"></li>
+    </ul>
+</section>
+</div>
+
+<!-- <div class="gallery_r"> -->
+    <a class="item half" href="works-detail.html">
+    <div class="gallery_r_inner">
+        <div class="item-innner">
+            <img src="images/gallery/akaneko_kifujin.jpg" alt="貴婦人">
+            <p class="title">赤ねこの異国情緒　貴婦人</p>
+            <p class="caption">
+                横浜の赤レンガ倉庫での展示会を機に制作しました。
+            </p>
+        </div>
+        <!-- /.item-innner -->
+    </div>
+    <!-- /.inner -->
+    </a>
+<!-- </div> -->
+<!-- /.gallery_r -->
+</main>
+
+
+<button type="button" class="page-btn" onclick="myFunc()">
+    <span class="fas fa-bars" title="メニューを開く"></span>
+</button>
+
+<button type="button" class="page-btn-close" onclick="myFunc()">
+    <span class="fas fa-times" title="メニューを閉じる"></span>
+</button>
+
+
+<footer class="page-foot">
+    <p>copyright &copy; 2018 FRiekobo</p>
+</footer>
+
+
+<script src="js/masonry.pkgd.min.js"></script>
+<script src="js/imagesloaded.pkgd.min.js"></script>
+<script src="js/func.js"></script>
+<script>
+function myFunc() {
+    document.querySelector('.page').classList.toggle('open');
+}
+</script>
+
+</body>
+</html>

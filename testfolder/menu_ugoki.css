@@ -1,0 +1,198 @@
+@charset "utf-8";
+
+/* メニュー選ぶボタンテスト */
+.button {
+  background-image: url(../images/top_images/shop_irassyai.jpg);
+  display: inline-block;
+  padding: 2rem 4rem;
+  margin: 1rem;
+  text-decoration: none;
+  font: bold 1rem Sans-Serif;
+  color: black;
+  position: relative;
+  overflow: hidden;
+  -moz-transition: 0.7s;
+  -o-transition: 0.7s;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+.button:before {
+  content: "";
+  position: absolute;
+  bottom: -40px;
+  right: -40px;
+  width: 10px;
+  height: 10px;
+  background: rgba(0,0,0,0.5);
+  border-radius: 50%;
+  -moz-transition: 0.7s;
+  -o-transition: 0.7s;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+.button span {
+  position: relative;
+}
+.button:hover, .button:focus {
+  color: white;
+}
+.button:hover:before, .button:focus:before {
+  width: 100px;
+  height: 100px;
+  opacity: 1;
+}
+
+.button:nth-child(1) {
+  background: #9b59b6;
+}
+
+
+
+//
+
+.imgWrap img:hover {
+  transform: scale(1.1);  /*画像の拡大率*/
+  transition-duration: 0.3s;  /*変化に掛かる時間*/
+}
+
+figure.hover-parent {
+    overflow: hidden; /*拡大時にはみ出た部分を隠す*/
+  width: 400px;  /*画像の幅*/
+  height: 400px;  /*画像の高さ*/
+  position: relative;
+  margin-bottom: 30px;
+  img {
+    display: block;
+    transition-duration: 0.3s;  /*変化に掛かる時間*/
+  }
+}
+figure.hover-parent img:hover {
+  transform: scale(1.1);  /*画像の拡大率*/
+  transition-duration: 0.3s;  /*変化に掛かる時間*/
+}
+
+figcaption.hover-mask {
+  // border-radius: 50%;
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(176,208,220,0.5);
+  opacity: 0;
+  color: #fff;
+  // display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+}
+
+figcaption.hover-mask {
+  opacity: 1;
+  transition:all 0.2s ease;
+  left: -100%;
+}
+figcaption.hover-mask   p{
+    display: block;
+  margin-left: 0;
+  }
+figure.hover-parent:hover .hover-mask {
+  left: 0;
+}
+
+/*共通画像拡大*/
+.imgUp{
+overflow: hidden; /*拡大時にはみ出た部分を隠す*/
+}
+.imgUp img:hover {
+  transform: scale(1.1);  /*画像の拡大率*/
+  transition-duration: 0.3s;  /*変化に掛かる時間*/
+}
+
+
+
+/*//脈打つボタン*/
+/*body {
+  overflow: hidden;
+}*/
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400');
+.bg,
+.button_myaku {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg {
+  animation: pulse 1.2s ease infinite;
+  background: #ff3466;
+}
+
+.button_myaku {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 99;
+  border: none;
+  background: pink;
+  background-size: 18px;
+  cursor: pointer;
+  outline: none;
+}
+
+.button_myaku a {
+  position: absolute;
+  color: #FFF;
+  font-size: 17px;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* ポラロイド風*/
+#polaroid {
+  background: #fff;
+  margin: 30px auto 60px auto;
+  width: 440px;
+  height:420px;
+  box-shadow: 0 2px 4px #777;
+  border-radius: 3px;
+  -webkit-transform: rotate(5deg);
+  -moz-transform: rotate(5deg);
+  -ms-transform: rotate(5deg);
+  -o-transform: rotate(5deg);
+  transform: rotate(5deg);
+}
+
+#polaroid img {
+  width: 200px;
+  border: solid 1px #ddd;
+  margin: 20px;
+}
+#polaroid p {
+  font-size: 16px;
+  text-align: center;
+}

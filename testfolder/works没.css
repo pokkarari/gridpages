@@ -1,0 +1,134 @@
+@charset "UTF-8";
+/* 基準色 */
+body {
+  margin: 0;
+  font-family: 'メイリオ', Meiryo,'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif;
+}
+
+.gallery_r {
+  width: 100%;
+  margin:  20px auto 0 auto;
+}
+  .gallery_r .item {
+    display: block;
+    float: left;
+    width: 285px;
+    color: #333;
+  }
+  .gallery_r .item .half {
+    width: 285px;
+  }
+
+.gallery_r .item:hover {
+  color: #333;
+  text-decoration: none;
+}
+
+.gallery_r .item .gallery_r_inner {
+  padding: 5px;
+}
+
+.gallery_r .item .item-inner {
+  padding: 9px;
+  border: 1px solid #eee;
+}
+
+.gallery_r .item .title {
+  margin-top: 10px;
+  font-style: 16px;
+  font-weight: bold;
+}
+
+.gallery_r .item .caption {
+  margin: 0;
+}
+
+
+/* ####### 画面の横幅が1260px以上 ###### */
+@media (min-width: 1260px) {
+
+}
+
+/* 006. content-photo
+ * Photoのスタイルを定義します
+ * ========================================================================== */
+ #content-photo {
+  padding : 10px;
+  }
+  #content-photo .container {
+    position      : relative;
+    padding       : 20px;
+    border-radius : 10px;
+    box-shadow    : 0 0 6px rgba(0,0,0,0.4);
+    background    : rgba(255,255,255,0.4);
+    }
+    #content-photo h1 {
+      margin         : 0;
+      color          : #333333;
+      font-family    : "Dosis",'メイリオ', Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", 'ＭＳ Ｐゴシック', sans-serif;
+      font-size      : 42px;
+      font-weight    : 700;
+      line-height    : 1;
+      letter-spacing : 0.1em;
+      }
+      #content-photo h1:after {
+        content        : "";
+        display        : inline-block;
+        position       : relative;
+        top            : -3px;
+        width          : 18px;
+        height         : 6px;
+        margin-left    : 0.1em;
+        border-radius  : 3px;
+        vertical-align : middle;
+        background     : #f0b209;
+        }
+    #photos {
+      margin-top : 20px;
+      }
+      #photos .item {
+        display : block;
+        float   : left;
+        width   : 100%;
+        color   : #333333;
+        }
+      #photos .item:hover {
+        color           : #333333;
+        text-decoration : none;
+        }
+        #photos .item .inner {
+          padding : 5px;
+          }
+          #photos .item .item-inner {
+            padding       : 10px;
+            border-radius : 6px;
+            background    : rgba(255,255,255,0.8);
+            box-shadow    : 0 0 6px rgba(0,0,0,0.4);
+            }
+            #photos .item img {
+              width  : 100%;
+              height : auto;
+              }
+            #photos .item .title {
+              margin-top  : 10px;
+              font-family : "Dosis",'メイリオ', Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", 'ＭＳ Ｐゴシック', sans-serif;
+              font-size   : 18px;
+              font-weight : bold;
+              }
+            #photos .item .caption {
+              margin : 0;
+              }
+
+/*@media (min-width : 480px) {
+#content-photo {
+  padding : 10px 20px 20px 20px;
+  }
+}
+@media (min-width : 768px) {
+#content-photo {}
+  #content-photo .container {}
+    #photos {}
+    #photos .item {
+      width : 282px;
+      }
+}*/
