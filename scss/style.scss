@@ -140,15 +140,16 @@ overflow: hidden; /*拡大時にはみ出た部分を隠す*/
 /* グリッド */
 
 .top_page {
+  --side: 20px;
   display: grid;
-  grid-template-columns: 20px 2fr 1fr 20px;
+  grid-template-columns: 60% 1fr ;
   grid-template-rows: 700px 200px 800px 40px 400px;
-
+  margin: 0 var(--side) 30px
 }
 
 /* セクション01 */
 .top_hero {
-  grid-column: 2 / -2;
+  grid-column: 1 / -1;
   grid-row: 1 /3;
     // セクション01のグリッド
     height: 700px;
@@ -201,7 +202,7 @@ overflow: hidden; /*拡大時にはみ出た部分を隠す*/
 
 /* セクションSNS */
 .top_sns {
-  grid-column: 2 / -1;
+  grid-column: 1 / -1;
   grid-row: 2;
   margin: 20px;
     // SNSグリッド
@@ -256,7 +257,7 @@ overflow: hidden; /*拡大時にはみ出た部分を隠す*/
 
 /* セクション02 */
 .top_menu {
-  grid-column: 2 / -2;
+  grid-column: 1 / -1;
   grid-row: 3 / 5;
       // セクション02のグリッド
     height: 800px;
@@ -359,7 +360,7 @@ overflow: hidden; /*拡大時にはみ出た部分を隠す*/
     }
         // 文字配列 蝋画のことを知っている？
       .top_rouga1 {
-        grid-column: 1 / 4;
+        grid-column: 1 / 3;
         grid-row: 1;
         display: block;
         color: #fff;
@@ -368,7 +369,7 @@ overflow: hidden; /*拡大時にはみ出た部分を隠す*/
        }
     .top_rouga2 {
         grid-column: 3;
-        grid-row: 2 / 4;
+        grid-row: 1 / 4;
         display: block;
         color: #fff;
         font-size: 36px;
@@ -388,7 +389,7 @@ overflow: hidden; /*拡大時にはみ出た部分を隠す*/
 
 /* セクション03 */
 .top_banner {
-  grid-column: 2 / -2;
+  grid-column: 1 / -1;
   grid-row: 5 / 8;
       // セクション04のグリッド
     display: grid;
@@ -411,8 +412,6 @@ overflow: hidden; /*拡大時にはみ出た部分を隠す*/
     grid-row: 3 / 5;
     margin-left: 18px;
     border: 2px solid $mainFontColor;
-    // background-image: url(../images/top_images/shop_irassyai.jpg);
-    // background-size: cover;
   }
 
 /* セクション04 お問い合わせ 独立グリッド*/
