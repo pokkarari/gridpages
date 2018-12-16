@@ -29,8 +29,9 @@ h2 {
 }
 
 .wrap {
-  width: 1024px;
+  width: 1260px;
   margin: 0 auto;
+  background-color: #FFFDE6;
 }
 
 /* 共通--------------------------------------*/
@@ -40,8 +41,6 @@ h2 {
 
 main {
   margin: 0 20px;
-  text-align: center;
-  overflow: hidden;
 }
 
 .menu_title {
@@ -174,7 +173,7 @@ main {
 .sec01_p {
   grid-column: 2;
   grid-row: 2;
-  background-color: #B0D0DC;
+  background-color: #FFAD00;
 }
 
 .sec01_img01 {
@@ -327,7 +326,7 @@ main {
   grid-row: 1 / 4;
   border: 1px solid #000;
   color: #fff;
-  background-color: #B0D0DC;
+  background-color: #FFAD00;
 }
 
 .top_rouga1 {
@@ -388,11 +387,8 @@ main {
   border: 1px solid #000;
 }
 
-.contact_title {
-  width: 750px;
-  margin: 0 auto;
-}
 .contact_title h2 {
+  margin: 20px;
   background-color: #332d2b;
   border-radius: 10px;
   color: #fff;
@@ -404,8 +400,6 @@ main {
 }
 
 .contact_form {
-  width: 850px;
-  margin: 0 auto;
   background-color: rgba(255, 255, 255, 0.8);
 }
 .contact_form table {
@@ -558,18 +552,6 @@ figure.hover-parent:hover .hover-mask {
   left: 0;
 }
 
-/* 1280px以下の幅（ノートPCやそれよりも狭い画面を想定）で読み込まれる */
-@media screen and (max-width: 1280px) {
-  .wrap {
-    width: 980px;
-  }
-}
-/* タブレットとスマートフォンで読み込まれることを想定 */
-@media screen and (max-width: 768px) {
-  .wrap {
-    width: 100%;
-  }
-}
 /* 点灯テスト */
 /* 点滅 */
 .blinking {

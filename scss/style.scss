@@ -10,9 +10,11 @@
 
   $mainFontColor: #332d2b; // 11こげ茶系
   $konjyoColor: #192f60; // 12紺青
-
   $softyelColor1: #FFFABE; // 13ソフト黄色ちょっとうすい色
   $softyelColor2: #FFFDE6; // ソフト黄色よりうすい色
+  $orangeColor: #FFAD00; //オレンジ色
+
+
 
 html{
     font-size: 62.5%;
@@ -34,9 +36,9 @@ h2 {
 }
 
 .wrap{
-width: 1024px;
+width: 1260px;
 margin: 0 auto;
-    // background-color: $softyelColor2;
+ background-color: $softyelColor2;
 }
 
 /* 共通--------------------------------------*/
@@ -47,14 +49,12 @@ margin: 0 auto;
 }
 main {
     margin: 0 20px;
-    text-align: center;
-    overflow: hidden;
+    // overflow: hidden;
 }
 .menu_title {
     position: absolute;
     top: 10px;
     color: $mainFontColor;
-    // background-color: rgba(176,208,220,0.5);
     padding: 10px;
   h2{
     z-index: 10;
@@ -135,6 +135,11 @@ overflow: hidden; /*拡大時にはみ出た部分を隠す*/
 .hover-parent1:hover .hover-mask1 {
   left: 0;
 }
+
+
+
+
+
 /*--------------------------------------*/
 
 /* グリッド */
@@ -179,7 +184,7 @@ overflow: hidden; /*拡大時にはみ出た部分を隠す*/
   grid-column: 2;
   grid-row: 2;
   // border: 1px solid #000;
-  background-color: $baseblueColor;
+  background-color: $orangeColor;
   }
 
   .sec01_img01 {
@@ -356,7 +361,7 @@ overflow: hidden; /*拡大時にはみ出た部分を隠す*/
       grid-row: 1 / 4;
       border: 1px solid #000;
       color: #fff;
-      background-color: $baseblueColor;
+      background-color: $orangeColor;
     }
         // 文字配列 蝋画のことを知っている？
       .top_rouga1 {
@@ -423,9 +428,8 @@ overflow: hidden; /*拡大時にはみ出た部分を隠す*/
 }
 
 .contact_title {
-    width: 750px;
-    margin: 0 auto;
   h2 {
+    margin: 20px;
     background-color: $mainFontColor;
     border-radius: 10px;
     color: #fff;
@@ -437,8 +441,6 @@ overflow: hidden; /*拡大時にはみ出た部分を隠す*/
   }
 }
 .contact_form {
-  width: 850px;
-  margin: 0 auto;
   background-color: rgba(255,255,255,0.8);
   table{
     margin: 0 30px;
@@ -590,14 +592,21 @@ figure.hover-parent:hover .hover-mask {
 }
 
 
-/* 1280px以下の幅（ノートPCやそれよりも狭い画面を想定）で読み込まれる */
-@media screen and (max-width: 1280px){
-.wrap { width: 980px; }
-}
-/* タブレットとスマートフォンで読み込まれることを想定 */
-@media screen and (max-width: 768px){
-.wrap { width: 100%; }
-}
+// /* ####### 画面の横幅が1260px以上 ###### */
+// @media (min-width: 1260px) {
+//   .page {
+//     --side:
+//     calc((100vw - (960px + 260px)) / 2);
+//   }
+// }
+// /* ####### 画面の横幅が1000px以上 ###### */
+// @media screen and (min-width: 1000px){
+//   .top_page{
+//     --side:
+//     calc((100vw - 960px) / 2);
+//   }
+// }
+
 
 /* 点灯テスト */
 /* 点滅 */
