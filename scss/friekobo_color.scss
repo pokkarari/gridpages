@@ -13,4 +13,34 @@
   $softyelColor1: #FFFABE; // 13ソフト黄色ちょっとうすい色
   $softyelColor2: #FFFDE6; // ソフト黄色よりうすい色
 
-    $orangeColor: #FFAD00; //オレンジ色
+  $orangeColor: #FFAD00; //オレンジ色
+
+    /* セクションSNS */
+.top_sns {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  margin: 20px;
+    // SNSグリッド
+    display: grid;
+    grid-template-columns: 2fr 200px 2fr;
+    grid-template-rows: auto;
+  ul{
+    grid-column: 2 / 3;
+    grid-row: 1;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    margin: 0;
+    list-style-type: none;
+  }
+  a{
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    display: block;
+    width: 40px;
+    line-height: 35px;
+    background-color: $mainFontColor;
+  }
+}
