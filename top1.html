@@ -22,20 +22,17 @@ $(function(){
 </head>
 
 
-<body class="page" >
+<body class="page">
 <header class="page-head">
-    <a href="#">エフリエこうぼう
-        <img src="images/logo.svg" alt="エフリエこうぼう">
-    </a>
- <ul>
-      <li>Contact</li>
-<!--         <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+ <ul class="header_sns">
+        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
         <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-        <li><a href="#"><i class="fab fa-instagram"></i></a></li> -->
+        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
     </ul>
 </header>
+
 <nav class="page-nav">
-    <ul >
+    <ul>
         <li class="nav_logo"><a href="#"><img src="images/logo.svg" alt="エフリエこうぼう" width="36"></a></li>
         <li><a href="#">Top</a></li>
         <li><a href="#">News</a></li>
@@ -49,7 +46,7 @@ $(function(){
 <main class="page-main">
 
 <div class="top_page">
-<div class="top_hero">
+<div class="top_hero bd_lineimg">
     <div class="sec01_movei img_fitcover">
     <img src="images/top/hero_yasuuri.jpg" alt="">
     </div>
@@ -61,7 +58,6 @@ $(function(){
         </div>
     </div>
     <div class="sec01_img01">
-        <img src="images/top/mado_sozume.png" alt="">
     </div>
     <div class="sec01_text">
         <p>ろう画とハンドメイドの</p>
@@ -76,9 +72,10 @@ $(function(){
 
 
 
-<div class="top_message">
-    <div class="top_message_p">
-        <p>ひとつひとつ、<br>こころを込めて作っています</p>
+<div class="top_gif">
+    <div class="top_gifwhone01">
+<img src="images/gif/gifanime02.gif" alt="ニンマリ笑うのウォネ">
+
 </div>
 
         <div class="sns_bg2"></div>
@@ -88,23 +85,23 @@ $(function(){
 
 
     <div class="top_menu">
-        <div class="top_news img_fitcover menu_container">
+        <div class="top_news img_fitcover menu_container bd_lineimg">
             <h2>News</h2>
             <ul>
                 <li><span>2019年2月22日</span>【イベント】猫の日にちなんだイベントに参加します</li>
                 <li><span>2019年01月01日</span>あけましておめでとうございます。今年の目標は・・・</li>
                 <li><span>2018年12月27日</span>年末にかかわらず、サイトをリニューアルしました！（卒業はさみしいです）</li>
             </ul>
-            <a class="btn_more" href="#">もっと見る</a>
+            <a class="btn_more bd_lineimg" href="#">もっと見る</a>
         </div>
-        <div class="top_about img_fitcover menu_container imgUp">
+        <div class="top_about img_fitcover menu_container imgUp bd_lineimg">
             <img src="images/top/top_about_syobu.jpg" alt="">
             <div class="menu_title">
-                <h2>About<span class="blinking">●</span></h2>
+                <h2><span class="blinking">●</span>About</h2>
             </div>
         </div>
-        <div class="sec02_twitter">
-        <a class="twitter-timeline" data-width="230" data-height="500" data-dnt="true" href="https://twitter.com/friekobo?ref_src=twsrc%5Etfw">Tweets by friekobo</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <div class="sec02_twitter bd_lineimg">
+        <a class="twitter-timeline" data-width="305" data-height="500" data-dnt="true" href="https://twitter.com/friekobo?ref_src=twsrc%5Etfw">Tweets by friekobo</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
         </div>
         <div class="top_works img_fitcover menu_container imgUp">
@@ -116,20 +113,20 @@ $(function(){
         </div>
         <div class="sec02_schoolroom">
             <div class="sec02_img01"></div>
-            <div class="top_rouga1"><h2>蝋画のこと</h2></div>
-            <div class="top_rouga2"><h2>知っている？</h2></div>
+            <div class="top_rouga1"><h2>ろう画</h2></div>
+            <div class="top_rouga2"><h2>のこと知っている？</h2></div>
             <div class="sec02_img02 circle_button">
                 <img src="images/top/top_rouga_img.jpg" alt="">
             </div>
         </div>
-        <div class="top_blog menu_container img_fitcover imgUp"> <!-- hover-parent1 -->
+        <div class="top_blog menu_container img_fitcover imgUp bd_lineimg">
             <img src="images/top/blog_pencl.jpg" alt="">
             <div class="menu_title"><!-- hover-mask1 -->
                 <h2 >Blog</h2>
                 <p>縁側でぽっからり</p>
             </div>
         </div>
-        <div class="top_shop menu_container img_fitcover imgUp">
+        <div class="top_shop menu_container img_fitcover imgUp bd_lineimg">
             <img src="images/top/top_shop.jpg" alt="">
             <div class="menu_title">
                 <h2>Shop</h2>
@@ -138,6 +135,8 @@ $(function(){
         </div>
     </div>
     <!-- /.top_menu -->
+
+    <div class="space"> </div>
 
     <div class="contact">
             <div class="contact_title">
@@ -180,8 +179,8 @@ $(function(){
 
 
 
-<div class="top_bgimg"><img src="images/top_images/fuwa.jpg" alt=""></div>
-<img class="dassensunzen" src="images/top_images/top_dassen.jpg" alt="">
+<div class="top_bgimg">
+<img class="dassensunzen" src="images/top_images/top_dassen.jpg" alt=""></div>
 </main>
 
 <button type="button" class="page-btn" onclick="myFunc()">

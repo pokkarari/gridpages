@@ -44,3 +44,30 @@
     background-color: $mainFontColor;
   }
 }
+
+
+
+
+//
+/* セクションメッセージ */
+<div class="top_message">
+    <div class="top_message_p">
+        <p>ひとつひとつ、<br>こころを込めて作っています</p>
+// </div>
+.top_message {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  margin-top: 20px;
+  background-image: url(../images/top/top_hand.png);
+    background-position: center right;
+    p {
+    display: block;
+    text-align: center;
+    margin-top: 180px;
+    font-size: 32px;
+    color: $orangeColor;
+    text-shadow:2px 2px 6px $orangeColor;
+    }
+}
+
+<img src="images/gif/gifanime02.gif" alt="巨キョロ見る猫のウォネ">

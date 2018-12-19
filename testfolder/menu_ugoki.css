@@ -196,3 +196,14 @@ overflow: hidden; /*拡大時にはみ出た部分を隠す*/
   font-size: 16px;
   text-align: center;
 }
+
+
+
+/* ボーダーイメージてすと 使用可能*/
+.bd_lineimg {
+  margin: 20px auto;
+  padding: 20px;
+  width: 460px;
+  border: 5px solid;
+  border-image: url(../images/line_image.png) 33% / 13px 13px repeat;
+}
