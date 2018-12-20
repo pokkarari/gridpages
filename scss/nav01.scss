@@ -15,7 +15,7 @@
   $softyelColor2: #FFFDE6; // ソフト黄色よりうすい色
   $orangeColor: #FFAD00; //オレンジ色
 
-  
+
 /* 基本 */
 html{
     font-size: 62.5%;
@@ -67,8 +67,9 @@ h2 {/* 20px~24pxで可変*/
   background-color: #fffde4;
   text-align: center;
 }
-   /* headerのSNS */
 
+
+   /* headerのSNS */
 .top_sns {
   margin: 20px;
   display:none;
@@ -100,11 +101,14 @@ h2 {/* 20px~24pxで可変*/
   background-color: #fff;
 }
 
+
+
+// navここか？？？？
 .page-nav {
   grid-column: 1;
   grid-row: 2;
+  background-color: rgba(255, 255, 255, 0.8);
   z-index: 100;
-   background-color: rgba(255, 255, 255, 0.8);
   display: none;
 }
 .page-nav ul {
@@ -206,7 +210,7 @@ h2 {/* 20px~24pxで可変*/
   /* メインコンテンツ */
 
   /* ヘッダー */
-  /* ヘッダーのSNS*/ 
+  /* ヘッダーのSNS*/
   .page-head {
     grid-column:1;
     grid-row: 1;
