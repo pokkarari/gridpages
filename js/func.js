@@ -1,6 +1,7 @@
 // jquery.masorny.js ギャラリーを並べる
 jQuery(function($){
 
+
   var container = document.querySelector('#gallery');
 
   imagesLoaded(container, function () {
@@ -12,6 +13,6 @@ jQuery(function($){
 
     $('#loading').fadeOut(300); //画像が読み込み終わったらloadingを非表示にする
     $('#gallery').addClass('on'); //コンテナにclassを付与して表示を切り替える
-
   });
+
 });
