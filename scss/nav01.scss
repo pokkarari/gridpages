@@ -13,7 +13,7 @@
 
   $softyelColor1: #FFFABE; // 13ソフト黄色ちょっとうすい色
   $softyelColor2: #FFFDE6; // ソフト黄色よりうすい色
-
+  $orangeColor: #FFAD00; //オレンジ色
 /* 基本 */
 html{
     font-size: 62.5%;
@@ -35,7 +35,7 @@ h2 {/* 20px~24pxで可変*/
 }
 
 
-/*  */
+/* ####### 画面の横幅が1024px以上 ###### */
 .page * {
   margin: 0;
 }
@@ -57,73 +57,35 @@ h2 {/* 20px~24pxで可変*/
 }
 
 .page-head {
-  padding: 15px 0;
-  background-color: #fff;
-  text-align: center;
   grid-column: 1;
-  grid-row: 1 / 2;
+  grid-row: 1;
+  padding: 15px 0;
+  background-color: #fffde4;
+  text-align: center;
 }
    /* headerのSNS */
 
-.header_sns{
-    grid-column:1 / 1;
-    grid-row: 1;
-   ul{
-    display:grid;
+.top_sns {
+  margin: 20px;
+    // SNSグリッド
+  ul{
+    display: grid;
     grid-auto-flow: column;
     justify-content: space-between;
     margin: 0;
-}
-}
-.header_sns {
-    grid-column:1 / 1;
-    grid-row: 1;
-li {
-  display: inline;
-    a {
+    list-style-type: none;
+  }
+  a{
     font-size: 14px;
     color: #fff;
-    text-align: center;;
+    text-align: center;
     border-radius: 5px;
+    display: block;
     width: 40px;
     line-height: 35px;
     background-color: $mainFontColor;
-    }
   }
 }
-
-
-/* ####### 画面の横幅が1260px以上 ###### */
-a {
-}
-// .top_sns {
-//   grid-column: 1 / -1;
-//   grid-row: 2;
-//   margin: 20px;
-//     // SNSグリッド
-//     display: grid;
-//     grid-template-columns: 2fr 200px 2fr;
-//     grid-template-rows: auto;
-//   ul{
-//     grid-column: 2 / 3;
-//     grid-row: 1;
-//     display: grid;
-//     grid-auto-flow: column;
-//     justify-content: space-between;
-//     margin: 0;
-//     list-style-type: none;
-//   }
-//   a{
-//     font-size: 14px;
-//     color: #fff;
-//     text-align: center;
-//     border-radius: 5px;
-//     display: block;
-//     width: 40px;
-//     line-height: 35px;
-//     background-color: $mainFontColor;
-//   }
-// }
 
 
 
@@ -189,51 +151,80 @@ a {
 }
 
 .page-foot {
-  grid-column: 1;
-  grid-row: 3;
-  padding: 20px 0;
+  grid-column: 1 / -1;
+  grid-row: 5;
+  margin: 0;
+  padding: 40px 0;
   background-color: $mainFontColor;
-  color: #fff;
-  text-align: center;
-  font-size: 14px;
+    // SNSグリッド
+    display: grid;
+    grid-template-columns: 2fr auto 2fr;
+    grid-template-rows: 1fr 1fr;
+  ul{
+    grid-column: 2 / 3;
+    grid-row: 1;
+    grid-column-gap: 50px;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  a{
+    font-size: 16px;
+    color: $mainFontColor;
+    text-align: center;
+    border-radius: 50%;
+    display: block;
+    width: 50px;
+    line-height: 50px;
+    background-color: $orangeColor;
+  }
 }
+
+.page-foot small {
+    grid-column: 2;
+    grid-row: 2;
+    color: #fff;
+    display: grid;
+    margin-top: 20px;
+    justify-self: center;
+    margin-top: 10px;
+  }
+
+
+
+
 
 /* ####### 画面の横幅が1260px以上 ###### */
 @media (min-width: 1260px) {
-  .page {
-    grid-template-columns: 50px auto 20px;
-    // grid-template-rows: 50px 50px 5px auto 100px 50px;
-  }
 
   /* メインコンテンツ */
   .page-main {
-    grid-column: 2;
-    grid-row: 4 / 5;
+
   }
 
   /* ヘッダー */
-
+  /* ナビゲーション */
   .page-head {
-    grid-column: 1 / -1;
+    grid-column:1;
     grid-row: 1;
     // ヘッドのグリッド
-    // grid-template-columns: 30px repeat(12, 1fr) 30px;
-  }
-  .page-head img {
-    // grid-column: 9/ 10;
-    // grid-row: 1 / -1;
-    // width: 100px;
-    // z-index: -1;
+    grid-template-columns: 100px repeat(11, 1fr);
+    grid-template-rows: 1fr 1fr;
   }
 
-  /* ナビゲーション */
-  .page-nav {
+  .top_sns ul {
+    grid-column: 2 / -1;
+    grid-row: 1;
     background-color: #fff;
     display: block;
-    grid-column: 1 / -1;
-    grid-row: 2 / 3;
   }
+
   .page-nav ul {
+    grid-column: 2 / -1;
+    grid-row: 2;
     display:grid;
     grid-gap: 10px;
     color: #fff;
@@ -255,10 +246,5 @@ a {
     display: none;
   }
 
-  /* フッター */
-  .page-foot {
-    grid-column: 1 / -1;
-    grid-row: 5 / end;
-    padding: 40px 0;
-  }
+
 }

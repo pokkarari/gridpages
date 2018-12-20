@@ -28,7 +28,7 @@ h2 {
   font-size: calc(2rem + ((1vw - 0.64rem) * 0.7143));
 }
 
-/*  */
+/* ####### 画面の横幅が1024px以上 ###### */
 .page * {
   margin: 0;
 }
@@ -50,43 +50,35 @@ h2 {
 }
 
 .page-head {
-  padding: 15px 0;
-  background-color: #fff;
-  text-align: center;
   grid-column: 1;
-  grid-row: 1 / 2;
+  grid-row: 1;
+  padding: 15px 0;
+  background-color: #fffde4;
+  text-align: center;
 }
 
 /* headerのSNS */
-.header_sns {
-  grid-column: 1 / 1;
-  grid-row: 1;
+.top_sns {
+  margin: 20px;
 }
-.header_sns ul {
+.top_sns ul {
   display: grid;
   grid-auto-flow: column;
   justify-content: space-between;
   margin: 0;
+  list-style-type: none;
 }
-
-.header_sns {
-  grid-column: 1 / 1;
-  grid-row: 1;
-}
-.header_sns li {
-  display: inline;
-}
-.header_sns li a {
+.top_sns a {
   font-size: 14px;
   color: #fff;
   text-align: center;
   border-radius: 5px;
+  display: block;
   width: 40px;
   line-height: 35px;
   background-color: #332d2b;
 }
 
-/* ####### 画面の横幅が1260px以上 ###### */
 .page-main {
   grid-column: 1;
   grid-row: 2;
@@ -148,42 +140,69 @@ h2 {
 }
 
 .page-foot {
-  grid-column: 1;
-  grid-row: 3;
-  padding: 20px 0;
+  grid-column: 1 / -1;
+  grid-row: 5;
+  margin: 0;
+  padding: 40px 0;
   background-color: #332d2b;
-  color: #fff;
+  display: grid;
+  grid-template-columns: 2fr auto 2fr;
+  grid-template-rows: 1fr 1fr;
+}
+.page-foot ul {
+  grid-column: 2 / 3;
+  grid-row: 1;
+  grid-column-gap: 50px;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.page-foot a {
+  font-size: 16px;
+  color: #332d2b;
   text-align: center;
-  font-size: 14px;
+  border-radius: 50%;
+  display: block;
+  width: 50px;
+  line-height: 50px;
+  background-color: #FFAD00;
+}
+
+.page-foot small {
+  grid-column: 2;
+  grid-row: 2;
+  color: #fff;
+  display: grid;
+  margin-top: 20px;
+  justify-self: center;
+  margin-top: 10px;
 }
 
 /* ####### 画面の横幅が1260px以上 ###### */
 @media (min-width: 1260px) {
-  .page {
-    grid-template-columns: 50px auto 20px;
-  }
-
   /* メインコンテンツ */
-  .page-main {
-    grid-column: 2;
-    grid-row: 4 / 5;
-  }
-
   /* ヘッダー */
+  /* ナビゲーション */
   .page-head {
-    grid-column: 1 / -1;
+    grid-column: 1;
     grid-row: 1;
+    grid-template-columns: 100px repeat(11, 1fr);
+    grid-template-rows: 1fr 1fr;
   }
 
-  /* ナビゲーション */
-  .page-nav {
+  .top_sns ul {
+    grid-column: 2 / -1;
+    grid-row: 1;
     background-color: #fff;
     display: block;
-    grid-column: 1 / -1;
-    grid-row: 2 / 3;
   }
 
   .page-nav ul {
+    grid-column: 2 / -1;
+    grid-row: 2;
     display: grid;
     grid-gap: 10px;
     color: #fff;
@@ -202,13 +221,6 @@ h2 {
   /* ボタン */
   .page-btn {
     display: none;
-  }
-
-  /* フッター */
-  .page-foot {
-    grid-column: 1 / -1;
-    grid-row: 5 / end;
-    padding: 40px 0;
   }
 }
 

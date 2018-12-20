@@ -71,3 +71,13 @@
 }
 
 <img src="images/gif/gifanime02.gif" alt="巨キョロ見る猫のウォネ">
+
+
+// 空白の要素をbackgroundの高さと幅でサイズを作る
+.space-image {
+  grid-column:1 / -1;
+  grid-row: 4 / 5;
+  background: url("../images/top/sakana01.jpg") 0 0 no-repeat;
+  padding-bottom: calc(100%*350/237);/* calc(100*ImageHeight/ImageWidth)% */
+  background-size: 100% auto;
+}
