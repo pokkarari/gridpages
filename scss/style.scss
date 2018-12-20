@@ -68,6 +68,7 @@ main {
   p {
     color: $mainFontColor;
     margin: -10px 10px -10px 20px;;
+    font-size: 14px;
   }
 }
 
@@ -172,7 +173,6 @@ overflow: hidden; /*拡大時にはみ出た部分を隠す*/
   .sec01_wsm{
   grid-column: 9 / -1;
   grid-row: 1;
-  border-bottom: 6px solid $mainFontColor;
   h2 {
     font-size: 28px;
     word-break: keep-all;
@@ -188,14 +188,16 @@ overflow: hidden; /*拡大時にはみ出た部分を隠す*/
   grid-column: 11/ -1;;
   grid-row: 2 / 4;
   background-image: url(../images/top/mado_sozume.png);
-  background-position: right center;
+  background-position: left center;
   z-index: 10;
   }
 
   .sec01_text {
   grid-column: 9 / -1;
   grid-row: 3 / 5;
-  padding: 50px 30px 0 30px;
+  padding: 20px 30px 0 30px;
+  border-bottom: 20px solid $mainFontColor;
+
       p {
     font-weight: bold;
   }
@@ -215,7 +217,7 @@ overflow: hidden; /*拡大時にはみ出た部分を隠す*/
   img {
   grid-column: 1;
   justify-self: center;
-  margin: 50px 0 0 0;
+  margin: 30px 0 0 0;
   }
 }
 
@@ -414,16 +416,32 @@ overflow: hidden; /*拡大時にはみ出た部分を隠す*/
   }
 す
 /* 空白 */
-// 空白の要素をbackgroundの要素を:emptyで入れる
-.space-image:empty {
-  grid-column:1 / -1;
-  grid-row: 4 / 5;
-  background-image: url("../images/top/sakana02.jpg");
-  // background-position: right top;
-  // background-size: 100px;
-  margin: -30px;
-  opacity: 0.4;
+//  gifアニメ その②
+// .space-image :empty {
+//   grid-column:1 / -1;
+//   grid-row: 4 / 5;
+//   // background-position: right top;
+//   // background-size: 100px;
+//   margin: 10px;
+//   opacity: 0.4;
+// }
+
+
+.top_gif2 {
+  grid-column: 1 / -1;
+  grid-row: 4;
 }
+.top_gifwhone02 {
+  grid-template-columns: 1fr;
+  display: grid;
+  img {
+  grid-column: 1;
+  justify-self: center;
+  margin: 30px 0 0 0;
+  }
+}
+
+
 
 
 /* お問い合わせ*/

@@ -56,6 +56,7 @@ h2 {
 .menu_title p {
   color: #332d2b;
   margin: -10px 10px -10px 20px;
+  font-size: 14px;
 }
 
 .imgUp {
@@ -159,7 +160,6 @@ h2 {
 .sec01_wsm {
   grid-column: 9 / -1;
   grid-row: 1;
-  border-bottom: 6px solid #332d2b;
 }
 .sec01_wsm h2 {
   font-size: 28px;
@@ -175,14 +175,15 @@ h2 {
   grid-column: 11/ -1;
   grid-row: 2 / 4;
   background-image: url(../images/top/mado_sozume.png);
-  background-position: right center;
+  background-position: left center;
   z-index: 10;
 }
 
 .sec01_text {
   grid-column: 9 / -1;
   grid-row: 3 / 5;
-  padding: 50px 30px 0 30px;
+  padding: 20px 30px 0 30px;
+  border-bottom: 20px solid #332d2b;
 }
 .sec01_text p {
   font-weight: bold;
@@ -204,7 +205,7 @@ h2 {
 .top_gifwhone01 img {
   grid-column: 1;
   justify-self: center;
-  margin: 50px 0 0 0;
+  margin: 30px 0 0 0;
 }
 
 /* セクション02 */
@@ -392,12 +393,19 @@ h2 {
 }
 
 す
-.space-image:empty {
+.top_gif2 {
   grid-column: 1 / -1;
-  grid-row: 4 / 5;
-  background-image: url("../images/top/sakana02.jpg");
-  margin: -30px;
-  opacity: 0.4;
+  grid-row: 4;
+}
+
+.top_gifwhone02 {
+  grid-template-columns: 1fr;
+  display: grid;
+}
+.top_gifwhone02 img {
+  grid-column: 1;
+  justify-self: center;
+  margin: 30px 0 0 0;
 }
 
 /* お問い合わせ*/
