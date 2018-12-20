@@ -232,6 +232,7 @@ h2 {
   width: 120px;
   padding: 10px;
   margin: 0;
+  font-family: 'Pangolin', cursive;
 }
 .top_news ul {
   grid-column: 1 / 4;
