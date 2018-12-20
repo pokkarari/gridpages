@@ -189,15 +189,18 @@ overflow: hidden; /*拡大時にはみ出た部分を隠す*/
   grid-row: 2 / 4;
   background-image: url(../images/top/mado_sozume.png);
   background-position: right center;
-  z-index: 10;;
+  z-index: 10;
   }
 
   .sec01_text {
   grid-column: 9 / -1;
   grid-row: 3 / 5;
-  padding: 20px;
+  padding: 50px 30px 0 30px;
       p {
     font-weight: bold;
+  }
+  img {
+    position: center bottom;
   }
  }
 
@@ -298,6 +301,9 @@ overflow: hidden; /*拡大時にはみ出た部分を隠す*/
     grid-column:1 / 4;
     grid-row: 2 / -1;
     border-left: 1px solid $mainFontColor;
+    .twitter-timeline{
+    overflow: hidden;
+    }
   }
     .top_works {
     grid-column:4 / 10;

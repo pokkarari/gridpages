@@ -182,10 +182,13 @@ h2 {
 .sec01_text {
   grid-column: 9 / -1;
   grid-row: 3 / 5;
-  padding: 20px;
+  padding: 50px 30px 0 30px;
 }
 .sec01_text p {
   font-weight: bold;
+}
+.sec01_text img {
+  position: center bottom;
 }
 
 /* gifアニメ */
@@ -279,6 +282,9 @@ h2 {
   grid-column: 1 / 4;
   grid-row: 2 / -1;
   border-left: 1px solid #332d2b;
+}
+.sec02_twitter .twitter-timeline {
+  overflow: hidden;
 }
 
 .top_works {
