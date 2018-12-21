@@ -15,6 +15,7 @@ h1 {
   font-size: calc(2.4rem + ((1vw - 0.64rem) * 2.1429));
   /* 24px~36pxで可変*/
   line-height: 1.3;
+  color: #332d2b;
 }
 
 h2 {
@@ -23,6 +24,7 @@ h2 {
   font-size: calc(2rem + ((1vw - 0.64rem) * 0.7143));
   /* 20px~24pxで可変*/
   line-height: 1.3;
+  color: #332d2b;
 }
 
 .wrap {
@@ -135,7 +137,7 @@ h2 {
 
 /*--------------------------------------*/
 /* main グリッド */
-.top_page {
+.top-page {
   display: grid;
   grid-template-rows: 700px 200px auto 200px auto;
   margin: 0 var(--side) 30px;
@@ -539,6 +541,80 @@ figure.hover-parent:hover .hover-mask {
 /* 002. About
  * Aboutのスタイルを定義します
  * ========================================================================== */
+.about_main {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr auto auto 500px;
+  margin: 0 var(--side) 30px;
+  --side: 20px;
+}
+
+.about_title {
+  grid-column: 1 / -1;
+  grid-row: 1;
+}
+.about_title h2 {
+  font-size: 46px;
+  margin: 30px;
+}
+
+.concept {
+  grid-column: 1 / -1;
+  grid-row: 2;
+}
+
+.conscept_text {
+  grid-template-columns: 1fr 10xp auto 1fr;
+  grid-template-rows: 1fr auto;
+}
+.conscept_text h3 {
+  grid-column: 3 / -1;
+  grid-row: 1;
+  font-size: 34px;
+  font-weight: normal;
+}
+.conscept_text .concept_line:after {
+  grid-column: 1 / 3;
+  grid-row: 2;
+  content: " ";
+  display: block;
+  border: 8px solid #FFAD00;
+}
+.conscept_text p {
+  grid-column: 2 / 3;
+  grid-row: 3;
+}
+
+.concept_img {
+  grid-column: 1 / -1;
+  grid-row: 3;
+}
+.concept_img img {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.profile {
+  grid-column: 1 / -1;
+  grid-row: 3;
+}
+
+.about_message {
+  grid-column: 1 / -1;
+  grid-row: 4;
+  margin-top: 20px;
+  background-image: url(../images/top/top_hand.png);
+  background-position: center right;
+}
+.about_message p {
+  display: block;
+  text-align: center;
+  margin-top: 180px;
+  font-size: 32px;
+  color: #FFAD00;
+  text-shadow: 2px 2px 6px #FFAD00;
+}
+
 /* 点灯テスト */
 /* 点滅 */
 .blinking {
