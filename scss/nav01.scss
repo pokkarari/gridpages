@@ -103,11 +103,11 @@ h2 {/* 20px~24pxで可変*/
 
 
 
-// navここか？？？？
+// nav
 .page-nav {
   grid-column: 1;
   grid-row: 2;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.9);
   z-index: 100;
   display: none;
 }
@@ -128,6 +128,9 @@ h2 {/* 20px~24pxで可変*/
 
 .open .page-nav {
   display: block;
+  position: absolute;
+  width: 100%;
+
 }
 
 .page-btn,
