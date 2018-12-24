@@ -646,12 +646,12 @@ figure.hover-parent:hover .hover-mask {
 /* 004. Gallery
  * Galleryのスタイルを定義します
  * ========================================================================== */
-.gallery_main {
-  margin: 0 20px;
-  overflow: hidden;
-}
-.gallery_main img {
+.gallry_main img {
   width: 100%;
+}
+
+.gallery_title, .gallery_subnav {
+  text-align: center;
 }
 
 .koumoku_size {
@@ -666,6 +666,7 @@ figure.hover-parent:hover .hover-mask {
 #gallery_content {
   margin: 0 auto 40px;
   background-color: #FFFABE;
+  text-align: right;
 }
 
 .item {
@@ -721,6 +722,7 @@ figure.hover-parent:hover .hover-mask {
   margin-bottom: 30px;
 }
 .gallery_subnav li {
+  list-style: none;
   display: inline-block;
   color: #332d2b;
   padding: 10px;
@@ -739,10 +741,7 @@ figure.hover-parent:hover .hover-mask {
 .shop_top p {
   border: 1px solid #FFAD00;
   text-align: center;
-}
-
-.shop_img {
-  width: 100%;
+  margin: 30px;
 }
 
 /* ####### 画面の横幅が1260px以上 ###### */

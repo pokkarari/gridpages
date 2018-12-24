@@ -64,10 +64,6 @@ clear: both;
 .menu_container {
     position: relative;
 }
-main {
-    // margin: 0 20px;
-    // overflow: hidden;
-}
 
 .menu_title {
     position: absolute;
@@ -705,15 +701,18 @@ grid-template-rows: 1fr auto auto 500px;
  * Galleryのスタイルを定義します
  * ========================================================================== */
 
-.gallery_main {
-    margin: 0 20px;
-    // text-align: center;
-    overflow: hidden;
+// main {
+//     margin: 0 20px;
+//     text-align: center;
+//     overflow: hidden;
+//   }
+.gallry_main{
   img{
     width: 100%;
   }
 }
-.gallery_title {
+.gallery_title, .gallery_subnav {
+    text-align: center;
 }
 
 .koumoku_size{
@@ -733,6 +732,7 @@ grid-template-rows: 1fr auto auto 500px;
 #gallery_content {
    margin: 0 auto 40px;
   background-color:$softyelColor1;
+  text-align: right;
 }
 
 .item{
@@ -778,7 +778,7 @@ grid-template-rows: 1fr auto auto 500px;
   // letter-spacing:2px;
 }
 
-.type_icon_ro{
+.type_icon_ro {
   display: inline-block;
   background-color: $baseblueColor;
   color: #FFF;
@@ -794,6 +794,7 @@ grid-template-rows: 1fr auto auto 500px;
     margin-bottom: 30px;
   }
   li {
+        list-style: none;
     display: inline-block;
     color: $mainFontColor2;
     padding: 10px;
@@ -821,9 +822,7 @@ grid-template-rows: 1fr auto auto 500px;
 .shop_top p {
   border: 1px solid $orengeColor2;
   text-align: center;
-}
-.shop_img {
-  width: 100%;
+  margin: 30px;
 }
 
 
