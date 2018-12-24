@@ -86,6 +86,7 @@ h2 {
   grid-column: 1;
   grid-row: 2;
   background-color: #fff;
+  position: relative;
 }
 
 .page-nav {
@@ -216,7 +217,7 @@ h2 {
     grid-auto-flow: column;
     justify-content: space-between;
     margin: 0;
-    padding: 0;
+    padding: 0 10px;
     list-style-type: none;
   }
 
