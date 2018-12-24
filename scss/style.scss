@@ -716,7 +716,15 @@ main {
   }
 }
 
-
+.koumoku_size{
+  display: block;
+  color: $mainFontColor;
+  font-size: 60px;
+  font-family: 'Pangolin', cursive;
+  margin: 30px 30px 20px 30px;
+  border-radius: 20px;
+  border-bottom: 4px solid $orengeColor2;
+}
 
 
 // JQ  masonry 画像並べる
@@ -725,52 +733,73 @@ main {
 
 #gallery_content {
    margin: 0 auto 40px;
+  background-color:$softyelColor1;
 }
 
 .item{
   width:220px;
   margin:15px;
-  padding-bottom:20px;
   background-color:#FFF;
-  border: 1px solid $baseblueColor;
-  background-color: #fff;
+  border: 1px solid $mainFontColor;
   img {
-    max-width: 210px;
-    padding: 5px;
+      max-width: 100%;
+      height: auto;
+
+    // padding: 2px;
+    // padding-right: 2px;
   }
 }
 
 .info{
-  position:relative;
-  padding:20px;
-  margin:20px 20px 0;
-  border: 1px solid $softyelColor1;
-  width:140px;
+  width: 150px;
+  margin:0 auto;
+  font-size: 14px;
 }
 
-.info:before {
-  content: "";
-  width: 13px;
-  height: 10px;
-  // background-image: url('../images/gallery/arrow.png');
-  position: absolute;
-  top:-10px;
-  left: 20px;
-}
-
-.info .date{
-  padding-bottom:5px;
-  font-size:10px;
+.info .type{
+  display: inline-block;
+  background-color: $baseblueColor;
+  border-radius: 50%;
+  color: #FFF;
+  font-size:12px;
   font-weight:bold;
-  letter-spacing:1px;
+  line-height: 10px;
+  padding: 5px ;
+  margin: 0;
 }
 
 .info .title{
-  font-size:16px;
-  letter-spacing:2px;
+  font-size:12px;
+  display: none;
+  // letter-spacing:2px;
 }
 
-
+.type_icon_ro{
+  display: inline-block;
+  background-color: $baseblueColor;
+  border-radius: 50%;
+  color: #FFF;
+  font-size:12px;
+  font-weight:bold;
+  line-height: 10px;
+  padding: 5px ;
+  margin: 0;
+}
+.gallery_subnav {
+  ul{
+    list-style: none;
+    margin-bottom: 30px;
+  }
+  li {
+    display: inline-block;
+    color: $mainFontColor2;
+    padding: 10px;
+    // transition: all .3s;
+  }
+}
+.gallery_subnav li:hover {
+  background-color: $softyelColor1;
+}
 
 // #gallery.on {
 //     opacity: 1;
@@ -782,9 +811,11 @@ main {
  * ========================================================================== */
  // ブログは、ココログにリンクしています
 
+
 /* 006. shop
  * ショップのスタイルを定義します
  * ========================================================================== */
+
 .shop_img {
 
 }
