@@ -646,13 +646,11 @@ figure.hover-parent:hover .hover-mask {
 /* 004. Gallery
  * Galleryのスタイルを定義します
  * ========================================================================== */
-main {
+.gallery_main {
   margin: 0 20px;
-  text-align: center;
   overflow: hidden;
 }
-
-.gallery_title img {
+.gallery_main img {
   width: 100%;
 }
 
@@ -661,9 +659,8 @@ main {
   color: #543900;
   font-size: 60px;
   font-family: 'Pangolin', cursive;
-  margin: 30px 30px 20px 30px;
-  border-radius: 20px;
-  border-bottom: 4px solid #FFAD00;
+  margin: 20px 30px 20px 50px;
+  border-bottom: 10px solid #ffad00;
 }
 
 #gallery_content {
@@ -682,6 +679,10 @@ main {
   height: auto;
 }
 
+.item img:hover {
+  opacity: 0.5;
+}
+
 .info {
   width: 150px;
   margin: 0 auto;
@@ -691,7 +692,6 @@ main {
 .info .type {
   display: inline-block;
   background-color: #B0D0DC;
-  border-radius: 50%;
   color: #FFF;
   font-size: 12px;
   font-weight: bold;
@@ -708,7 +708,6 @@ main {
 .type_icon_ro {
   display: inline-block;
   background-color: #B0D0DC;
-  border-radius: 50%;
   color: #FFF;
   font-size: 12px;
   font-weight: bold;
@@ -737,6 +736,15 @@ main {
 /* 006. shop
  * ショップのスタイルを定義します
  * ========================================================================== */
+.shop_top p {
+  border: 1px solid #FFAD00;
+  text-align: center;
+}
+
+.shop_img {
+  width: 100%;
+}
+
 /* ####### 画面の横幅が1260px以上 ###### */
 @media (mix-width: 1260px) {
   .page {

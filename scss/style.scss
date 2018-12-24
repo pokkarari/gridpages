@@ -705,15 +705,15 @@ grid-template-rows: 1fr auto auto 500px;
  * Galleryのスタイルを定義します
  * ========================================================================== */
 
-main {
+.gallery_main {
     margin: 0 20px;
-    text-align: center;
+    // text-align: center;
     overflow: hidden;
-}
-.gallery_title {
   img{
     width: 100%;
   }
+}
+.gallery_title {
 }
 
 .koumoku_size{
@@ -721,9 +721,8 @@ main {
   color: $mainFontColor;
   font-size: 60px;
   font-family: 'Pangolin', cursive;
-  margin: 30px 30px 20px 30px;
-  border-radius: 20px;
-  border-bottom: 4px solid $orengeColor2;
+  margin: 20px 30px 20px 50px;
+  border-bottom: 10px solid #ffad00;
 }
 
 
@@ -749,6 +748,12 @@ main {
     // padding-right: 2px;
   }
 }
+.item img:hover {
+  opacity: 0.5;
+  // background-color: rgba(255, 255, 255, 0.8);
+}
+
+
 
 .info{
   width: 150px;
@@ -759,7 +764,6 @@ main {
 .info .type{
   display: inline-block;
   background-color: $baseblueColor;
-  border-radius: 50%;
   color: #FFF;
   font-size:12px;
   font-weight:bold;
@@ -777,7 +781,6 @@ main {
 .type_icon_ro{
   display: inline-block;
   background-color: $baseblueColor;
-  border-radius: 50%;
   color: #FFF;
   font-size:12px;
   font-weight:bold;
@@ -815,9 +818,12 @@ main {
 /* 006. shop
  * ショップのスタイルを定義します
  * ========================================================================== */
-
+.shop_top p {
+  border: 1px solid $orengeColor2;
+  text-align: center;
+}
 .shop_img {
-
+  width: 100%;
 }
 
 
