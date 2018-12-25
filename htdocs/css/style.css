@@ -1,0 +1,833 @@
+@charset "UTF-8";
+/* 基準色 */
+/* 共通--------------------------------------*/
+body {
+  margin: 0;
+  font-family: 'メイリオ', Meiryo,'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif;
+  font-size: 1.6rem;
+  /* 16px*/
+  line-height: 2;
+}
+
+h1 {
+  font-size: 36px;
+  /* IE8以下とAndroid4.3以下用フォールバック */
+  font-size: calc(2.4rem + ((1vw - 0.64rem) * 2.1429));
+  /* 24px~36pxで可変*/
+  line-height: 1.3;
+  color: #543900;
+}
+
+h2 {
+  font-size: 24px;
+  /* IE8以下とAndroid4.3以下用フォールバック */
+  font-size: calc(2rem + ((1vw - 0.64rem) * 0.7143));
+  /* 20px~24pxで可変*/
+  line-height: 1.3;
+}
+
+.wrap {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* 001. Top
+ * Top画面のスタイルを定義します
+ * ========================================================================== */
+.menu_container {
+  position: relative;
+}
+
+.menu_title {
+  position: absolute;
+  color: #543900;
+  top: 10px;
+}
+.menu_title h2 {
+  font-family: 'Pangolin', cursive;
+  z-index: 10;
+  color: #543900;
+  font-size: 42px;
+  padding: 10px 0 10px 10px;
+}
+.menu_title p {
+  color: #543900;
+  margin: -5px 10px -10px 20px;
+  font-size: 14px;
+  line-height: 1.8rem;
+}
+
+.imgUp {
+  overflow: hidden;
+  /*拡大時にはみ出た部分を隠す*/
+}
+
+.imgUp img:hover {
+  transform: scale(1.1);
+  /*画像の拡大率*/
+  transition-duration: 0.3s;
+  /*変化に掛かる時間*/
+}
+
+.img_fitcover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hover-parent1 {
+  overflow: hidden;
+  /*拡大時にはみ出た部分を隠す*/
+  width: 400px;
+  /*画像の幅*/
+  height: 400px;
+  /*画像の高さ*/
+  position: relative;
+  margin-bottom: 30px;
+}
+.hover-parent1 img {
+  display: block;
+  transition-duration: 0.3s;
+  /*変化に掛かる時間*/
+}
+
+.hover-parent1 img:hover {
+  transform: scale(1.1);
+  /*画像の拡大率*/
+  transition-duration: 0.3s;
+  /*変化に掛かる時間*/
+}
+
+.hover-mask1 {
+  width: 400px;
+  height: 200px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(176, 208, 220, 0.2);
+  opacity: 0;
+  color: #543900;
+  align-items: left;
+  text-align: left;
+  padding: 30px;
+}
+
+.hover-mask1 {
+  opacity: 1;
+  transition: all 0.2s ease;
+  left: -100%;
+}
+.hover-mask1 p {
+  display: block;
+  margin-left: 0;
+}
+
+.hover-parent1:hover .hover-mask1 {
+  left: 0;
+}
+
+/*--------------------------------------*/
+/* main グリッド */
+.top-page {
+  display: grid;
+  grid-template-rows: 700px 200px auto 200px auto;
+  margin: 0 var(--side) 30px;
+  --side: 20px;
+}
+
+/* セクション01 */
+.top_hero {
+  grid-column: 1 / -1;
+  grid-row: 1 / 3;
+  height: 700px;
+  background-color: #ffc864;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 300px 1fr 1fr 1fr;
+}
+
+.sec01_movei {
+  grid-column: 1 / 9;
+  grid-row: 1 / -1;
+  background-image: url(../images/top/hero_yasuuri.jpg);
+  background-size: cover;
+}
+
+.sec01_wsm {
+  grid-column: 9 / -1;
+  grid-row: 1;
+}
+.sec01_wsm h2 {
+  font-size: 28px;
+  padding: 20px;
+  text-align: left;
+}
+
+.sec01_img01 {
+  grid-column: 11/ -1;
+  grid-row: 2 / 4;
+  background-image: url(../images/top/mado_sozume.jpg);
+  background-position: right top;
+}
+
+.sec01_text {
+  grid-column: 9 / -1;
+  grid-row: 3 / 5;
+  padding: 20px 30px 0 30px;
+  border-bottom: 20px solid #543900;
+}
+.sec01_text p {
+  font-weight: bold;
+}
+.sec01_text img {
+  position: center bottom;
+}
+
+/* gifアニメ 200px*/
+.top_gif {
+  grid-column: 1 / -1;
+  grid-row: 2;
+}
+
+.top_gifwhone01 {
+  grid-template-columns: 1fr;
+  display: grid;
+}
+.top_gifwhone01 img {
+  grid-column: 1;
+  justify-self: center;
+  margin: 30px 0 50px 0;
+}
+
+/* セクション02 auto*/
+.top_menu {
+  grid-column: 1 / -1;
+  grid-row: 3 / 4;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 250px auto auto;
+}
+
+.top_news {
+  grid-column: 1 / 8;
+  grid-row: 1;
+  border: 1px solid #543900;
+  color: #332d2b;
+  background-image: url(../images/top/top_news_fish.jpg);
+  background-position: right center;
+  display: grid;
+  grid-template-columns: 150px auto auto;
+  grid-template-rows: auto 1fr auto;
+  grid-rows-gap: 10px;
+}
+.top_news h2 {
+  display: block;
+  grid-column: 1;
+  grid-row: 1;
+  color: #332d2b;
+  background-color: #B0D0DC;
+  width: 120px;
+  padding: 10px;
+  margin: 0;
+  font-family: 'Pangolin', cursive;
+}
+.top_news p {
+  grid-column: 2;
+  grid-row: 1;
+  font-weight: bold;
+  color: #332d2b;
+  text-align: left;
+  margin-top: 10px;
+}
+.top_news ul {
+  grid-column: 1 / 4;
+  grid-row: 2 / 3;
+  font-size: 14px;
+  list-style-type: none;
+  padding: 10px 25px;
+  line-height: 1.5em;
+  margin: 0;
+  text-align: left;
+}
+.top_news ul li {
+  padding: 5px;
+}
+.top_news ul span {
+  font-weight: bold;
+  background-color: #C5DF9C;
+}
+
+.top_news li a {
+  color: #332d2b;
+}
+
+.btn_more {
+  grid-column: 3 / 4;
+  grid-row: 3 / 4;
+  text-decoration: none;
+  text-align: center;
+  color: #543900;
+  margin: -10px;
+  padding: 0;
+  border: 1px solid #543900;
+  border-radius: 12px;
+  padding: 5px;
+  width: 150px;
+}
+
+.top_about {
+  grid-column: 8 / -1;
+  grid-row: 1;
+  border: 1px solid #543900;
+}
+.top_about .menu_title {
+  width: 100%;
+  text-align: center;
+}
+
+.sec02_twitter {
+  grid-column: 1 / 4;
+  grid-row: 2 / -1;
+  background-color: #FFFDE6;
+}
+.sec02_twitter .twitter-timeline {
+  overflow: hidden;
+}
+
+.top_works {
+  grid-column: 4 / 10;
+  grid-row: 2 / 3;
+  background-image: url(../images/top_images/works_winter.jpg);
+  background-size: cover;
+}
+.top_works h2 {
+  display: inline-block;
+}
+.top_works p {
+  display: inline-block;
+  font-weight: bold;
+}
+
+.sec02_schoolroom {
+  grid-column: 10 / -1;
+  grid-row: 2 / 3;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) 56px;
+  grid-template-rows: repeat(6, 1fr);
+}
+.sec02_schoolroom img {
+  grid-column: 1 / -1;
+  grid-row: 3 / 7;
+  width: 100%;
+}
+.sec02_schoolroom h2 {
+  font-size: 52px;
+  font-weight: bold;
+}
+
+.sec02_img01 {
+  grid-column: 1 / -1;
+  grid-row: 1 / 4;
+  color: #fff;
+  background-color: #ffc864;
+}
+
+.top_rouga1 {
+  grid-column: 1 / 3;
+  grid-row: 1;
+  display: block;
+  color: #fff;
+  font-size: 34px;
+  font-weight: bold;
+  padding: 10px;
+}
+.top_rouga1 h2 {
+  font-size: 46px;
+  font-weight: bold;
+}
+
+.top_rouga2 {
+  grid-column: 3;
+  grid-row: 1 / 4;
+  display: block;
+  font-size: 28px;
+  font-weight: bold;
+  padding-top: 20px;
+  writing-mode: vertical-rl;
+  color: #fff;
+}
+.top_rouga2 h2 {
+  font-size: 34px;
+  font-weight: bold;
+}
+
+.sec02_img02 {
+  grid-column: 1 / -1;
+  grid-row: 4 / 7;
+}
+
+/* セクション02統合 ブログとショップ */
+.top_blog {
+  grid-column: 1 / 7;
+  grid-row: 3 / 4;
+  margin-right: 18px;
+  border: 2px solid #543900;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+}
+.top_blog img {
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
+}
+.top_blog .menu_title {
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+  justify-self: end;
+}
+
+.top_shop {
+  grid-column: 7 / -1;
+  grid-row: 3 / 4;
+  margin-left: 18px;
+  border: 2px solid #543900;
+  display: grid;
+  grid-template-columns: fr1 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.top_shop img {
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
+  height: 200px;
+}
+.top_shop .menu_title {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.top_gif2 {
+  grid-column: 1 / -1;
+  grid-row: 4;
+}
+
+.top_gifwhone02 {
+  grid-template-columns: 1fr;
+  display: grid;
+}
+.top_gifwhone02 img {
+  grid-column: 1;
+  justify-self: center;
+  margin: 30px 0 100px 0;
+}
+
+/* お問い合わせ*/
+.contact {
+  grid-column: 1 / -1;
+  grid-row: 6 / 7;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+  border: 1px solid #000;
+  width: 800px;
+  display: grid;
+  justify-content: center;
+}
+
+.contact_title h2 {
+  margin: 20px;
+  background-color: #FFAD00;
+  border-radius: 10px;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+}
+.contact_title p {
+  display: block;
+  padding: 20px 60px;
+  text-align: left;
+}
+
+.contact_form {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.contact_form table {
+  margin: 0 30px;
+}
+.contact_form table input[type="text"], .contact_form table input[type="submit"] {
+  padding: 5px;
+  width: 70%;
+}
+.contact_form table textarea {
+  padding: 5px;
+  width: 400px;
+  height: 200px;
+}
+.contact_form tr {
+  border: 5px solid #fff;
+}
+.contact_form th {
+  text-align: right;
+  padding: 15px;
+  background-color: #B0D0DC;
+  border-collapse: separate;
+}
+.contact_form .contact_name, .contact_form input, .contact_form textarea {
+  margin: 20px;
+}
+
+.btn_contact {
+  text-align: center;
+}
+.btn_contact input {
+  display: inline-block;
+  padding: 0.2em 2em;
+  text-decoration: none;
+  background: #E0B6A9;
+  color: #fff;
+  border: solid 2px #E0B6A9;
+  border-radius: 3px;
+  transition: .4s;
+  font-size: 1.5em;
+}
+.btn_contact input:hover {
+  background: white;
+  color: #E0B6A9;
+}
+
+/* 一番下　だっせんすんぜん */
+.dassensunzen {
+  width: 100%;
+}
+
+.imgWrap img:hover {
+  transform: scale(1.1);
+  /*画像の拡大率*/
+  transition-duration: 0.3s;
+  /*変化に掛かる時間*/
+}
+
+figure.hover-parent {
+  overflow: hidden;
+  /*拡大時にはみ出た部分を隠す*/
+  width: 400px;
+  /*画像の幅*/
+  height: 400px;
+  /*画像の高さ*/
+  position: relative;
+  margin-bottom: 30px;
+}
+figure.hover-parent img {
+  display: block;
+  transition-duration: 0.3s;
+  /*変化に掛かる時間*/
+}
+
+figure.hover-parent img:hover {
+  transform: scale(1.1);
+  /*画像の拡大率*/
+  transition-duration: 0.3s;
+  /*変化に掛かる時間*/
+}
+
+figcaption.hover-mask {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(176, 208, 220, 0.5);
+  opacity: 0;
+  color: #fff;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+}
+
+figcaption.hover-mask {
+  opacity: 1;
+  transition: all 0.2s ease;
+  left: -100%;
+}
+figcaption.hover-mask p {
+  display: block;
+  margin-left: 0;
+}
+
+figure.hover-parent:hover .hover-mask {
+  left: 0;
+}
+
+/* 002. News
+ * Newsのスタイルを定義します
+ * ========================================================================== */
+/* 003. About
+ * Aboutのスタイルを定義します
+ * ========================================================================== */
+.about_main {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr auto auto 500px;
+  margin: 0 var(--side) 30px;
+  --side: 20px;
+}
+
+.about_title {
+  grid-column: 1 / -1;
+  grid-row: 1;
+}
+.about_title h2 {
+  font-size: 46px;
+  margin: 30px;
+  font-family: 'Pangolin', cursive;
+}
+
+.concept {
+  grid-column: 1 / -1;
+  grid-row: 2;
+}
+
+.conscept_text {
+  grid-template-columns: 1fr 10xp auto 1fr;
+  grid-template-rows: 1fr auto;
+}
+.conscept_text h3 {
+  grid-column: 3 / -1;
+  grid-row: 1;
+  font-size: 34px;
+  font-weight: normal;
+}
+.conscept_text .concept_line:after {
+  grid-column: 1 / 3;
+  grid-row: 2;
+  content: " ";
+  display: block;
+  border: 8px solid #ffc864;
+}
+.conscept_text p {
+  grid-column: 2 / 3;
+  grid-row: 3;
+}
+
+.concept_img {
+  grid-column: 1 / -1;
+  grid-row: 3;
+}
+.concept_img img {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.profile {
+  grid-column: 1 / -1;
+  grid-row: 3;
+}
+
+.about_message {
+  grid-column: 1 / -1;
+  grid-row: 4;
+  margin-top: 20px;
+  background-image: url(../images/top/top_hand.png);
+  background-position: center right;
+}
+.about_message p {
+  display: block;
+  text-align: center;
+  margin-top: 180px;
+  font-size: 32px;
+  color: #ffc864;
+  text-shadow: 2px 2px 6px #ffc864;
+}
+
+/* 004. Gallery
+ * Galleryのスタイルを定義します
+ * ========================================================================== */
+.gallry_main img {
+  width: 100%;
+}
+
+.gallery_title, .gallery_subnav {
+  text-align: center;
+}
+
+.koumoku_size {
+  display: block;
+  color: #543900;
+  font-size: 60px;
+  font-family: 'Pangolin', cursive;
+  margin: 20px 30px 20px 50px;
+  border-bottom: 10px solid #ffad00;
+}
+
+#gallery_content {
+  margin: 0 auto 40px;
+  background-color: #FFFABE;
+  text-align: right;
+}
+
+.item {
+  width: 220px;
+  margin: 15px;
+  background-color: #FFF;
+  border: 1px solid #543900;
+}
+.item img {
+  max-width: 100%;
+  height: auto;
+}
+
+.item img:hover {
+  opacity: 0.5;
+}
+
+.info {
+  width: 150px;
+  margin: 0 auto;
+  font-size: 14px;
+}
+
+.info .type {
+  display: inline-block;
+  background-color: #B0D0DC;
+  color: #FFF;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 10px;
+  padding: 5px;
+  margin: 0;
+}
+
+.info .title {
+  font-size: 12px;
+  display: none;
+}
+
+.type_icon_ro {
+  display: inline-block;
+  background-color: #B0D0DC;
+  color: #FFF;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 10px;
+  padding: 5px;
+  margin: 0;
+}
+
+.gallery_subnav ul {
+  list-style: none;
+  margin-bottom: 30px;
+}
+.gallery_subnav li {
+  list-style: none;
+  display: inline-block;
+  color: #332d2b;
+  padding: 10px;
+}
+
+.gallery_subnav li:hover {
+  background-color: #FFFABE;
+}
+
+/* 005. Blog
+ * ブログのスタイルを定義します
+ * ========================================================================== */
+/* 006. shop
+ * ショップのスタイルを定義します
+ * ========================================================================== */
+.shop_top p {
+  border: 1px solid #FFAD00;
+  text-align: center;
+  margin: 30px;
+}
+
+/* ####### 画面の横幅が1260px以上 ###### */
+@media (mix-width: 1260px) {
+  .page {
+    --side:
+    calc((100vw - (960px + 260px)) / 2);
+  }
+}
+/* ####### 画面の横幅が1000px以上 ###### */
+@media screen and (max-width: 1000px) {
+  .top_page {
+    --side:
+    calc((100vw - 960px) / 2);
+  }
+
+  .top_rouga1 h2 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .top_rouga2 h2 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+}
+/* 点灯テスト */
+/* 点滅 */
+.blinking {
+  animation: blink 1.6s ease-in-out infinite alternate;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.circle_button {
+  position: relative;
+  overflow: hidden;
+}
+
+.circle_button:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 0px;
+  background: rgba(255, 173, 0, 0.5);
+  transition: 0.3s;
+}
+
+.circle_button:hover:before, .circle_button:focus:before {
+  width: 400px;
+  height: 400px;
+  opacity: 1;
+}
+
+.circle_button:nth-child(1) {
+  background: #9b59b6;
+}
+
+/* イメージボーダー 最後の方に置くこと*/
+.bd_lineimg {
+  border: 2px solid #543900;
+  z-index: 10;
+  border-image: url(../images/line_img2.png) 33%/25px 25px repeat;
+}
+
+.bd_lineimg_said {
+  border-left: 2px solid #543900;
+  border-image: url(../images/line_img_side.png) 33%/13px 13px repeat;
+}
+
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+
+/*# sourceMappingURL=style.css.map */
