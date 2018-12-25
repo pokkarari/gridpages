@@ -148,7 +148,18 @@ overflow: hidden; /*拡大時にはみ出た部分を隠す*/
   left: 0;
 }
 
+//右下のtopへ戻るボタン
+.pagetop_btn a {
+  display: block;
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  right: 10px;
+  bottom: 72px;
+  z-index: 100;
+  opacity: 0.8;
 
+}
 
 
 

@@ -24,7 +24,7 @@ $(function(){
 </head>
 
 
-<body class="page">
+<body id="top" class="page">
 
 <header class="page-head">
     <div class="logo">
@@ -216,10 +216,18 @@ $(function(){
     <small>copyright &copy; 2018 FRiekobo</small>
 </footer>
 
+<!-- トップ戻るボタン -->
+<div class="pagetop_btn"><a href="#top"><img src="images/top_btn.png" alt="ページトップへ戻る"></a></div>
+
+<script src="js/smooth-scroll.polyfills.min.js"></script>
 <script>
 function myFunc() {
     document.querySelector('.page').classList.toggle('open');
 }
+
+$(function(){
+var scroll = new SmoothScroll('a[href*="#"]');
+});
 </script>
 
 
