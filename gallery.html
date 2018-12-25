@@ -24,7 +24,7 @@
 </head>
 
 
-<body class="page gallery_body">
+<body id="top" class="page gallery_body">
 
 <header class="page-head">
     <div class="logo">
@@ -67,7 +67,7 @@
                 <li><a href="#gallery_content">イラスト</a></li>
                 <li><a href="#gallery_content">ぬいぐるみ・クレイ</a></li>
                 <li><a href="#gallery_content">ウォネとその他の皆さん</a></li>
-                <li><a href="#gallery_content">その他</a></li>
+                <li><a href="#gallery_content">そのほか イロイロ</a></li>
             </ul>
         </nav>
 
@@ -229,19 +229,22 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/images/prev.png" type="text/javascript"></script>
 
 
+<!-- トップ戻るボタン -->
+<div class="pagetop_btn"><a href="#top"><img src="images/top_btn.png" alt="ページトップへ戻る"></a></div>
+
+<script src="js/smooth-scroll.polyfills.min.js"></script>
 <script>
-// レスポンシブのナビゲーション
+// レスポンシブでナビゲーションの表示非表示
 function myFunc() {
     document.querySelector('.page').classList.toggle('open');
 }
 
-// rightboxの設定オプション
-    lightbox.option({
-      'resizeDuration': 200, // 表示ディゾリの早さ
-      'wrapAround': true // 最後の画像に来たらループ
-    })
-
+// スムーススクロール topへ戻ったり、#へリンクでスクロール
+$(function(){
+var scroll = new SmoothScroll('a[href*="#"]');
+});
 </script>
+
 
 </body>
 </html>
