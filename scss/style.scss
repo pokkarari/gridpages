@@ -634,26 +634,34 @@ figure.hover-parent:hover .hover-mask {
  * Newsのスタイルを定義します
  * ========================================================================== */
 // タイトル
-.page-main .wrap{
 
-}
 .news_main {
-display: grid;
-grid-template-columns: repeat(12, 1fr);
-grid-template-rows: 1fr auto auto 500px;
-  margin: 0 var(--side) 30px;
-  --side: 20px;
+  width: 960px;
+  margin: 0 auto;
+  color: $mainFontColor;
+
 }
 // タイトル
 .news_title {
-  grid-column: 1 / -1;
-  grid-row: 1;
-  h2{
+      h2{
     font-size: 46px;
+    text-align: center;
+    border-bottom: 8px solid$orengeColor2;
+    padding: 25px;
     margin: 30px;
     font-family: 'Pangolin', cursive;
+    background-image: url(../images/news/test01.jpg);
+    background-size: 150px;
+  }
+  h3 {
+    margin-left: 30px;
   }
 }
+.news_body {
+  margin: 30px;
+}
+
+
 
 
 /* 003. About

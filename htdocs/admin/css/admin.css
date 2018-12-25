@@ -9,7 +9,7 @@ body {
 
 h1 {
   font-size: 24px;
-  border-left: 8px solid #666;
+  border-left: 8px solid #FFAD00;
   padding-left: 10px;
 }
 
@@ -20,7 +20,7 @@ table {
 }
 th {
   border: 1px solid #666;
-  background-color: #ccc;
+  background-color: #ffc864;
   padding: 4px;
 }
 td {
@@ -42,7 +42,7 @@ table#loginbox input {
 
 header {
   padding: 10px;
-  background-color: #666;
+  background-color: #FFAD00;
   color: #fff;
   font-size: 14px;
   font-weight: bold;
