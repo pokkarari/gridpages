@@ -20,7 +20,7 @@ $(function(){
 });
 </script>
 </head>
-<body class="page">
+<body id="top" class="page">
 
 <body class="page">
 
@@ -65,12 +65,22 @@ $(function(){
     <p>copyright (c)2018 FRiekobo</p>
 </footer>
 
+<!-- トップ戻るボタン -->
+<div class="pagetop_btn"><a href="#top"><img src="images/top_btn.png" alt="ページトップへ戻る"></a></div>
 
+<script src="js/smooth-scroll.polyfills.min.js"></script>
 <script>
+// レスポンシブでナビゲーションの表示非表示
 function myFunc() {
     document.querySelector('.page').classList.toggle('open');
 }
+
+// スムーススクロール topへ戻ったり、#へリンクでスクロール
+$(function(){
+var scroll = new SmoothScroll('a[href*="#"]');
+});
 </script>
+
 
 </body>
 </html>

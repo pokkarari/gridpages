@@ -40,6 +40,10 @@ h2 {
 /* 001. Top
  * Top画面のスタイルを定義します
  * ========================================================================== */
+.page * {
+  margin: 0;
+}
+
 .menu_container {
   position: relative;
 }
@@ -55,6 +59,7 @@ h2 {
   color: #543900;
   font-size: 42px;
   padding: 10px 0 10px 10px;
+  margin: 0;
 }
 .menu_title p {
   color: #543900;
@@ -64,8 +69,8 @@ h2 {
 }
 
 .imgUp {
-  overflow: hidden;
   /*拡大時にはみ出た部分を隠す*/
+  overflow: hidden;
 }
 
 .imgUp img:hover {
@@ -73,12 +78,14 @@ h2 {
   /*画像の拡大率*/
   transition-duration: 0.3s;
   /*変化に掛かる時間*/
+  opacity: 0.9;
+  background-color: #ffc864;
 }
 
 .img_fitcover img {
-  width: 100%;
-  height: 100%;
   object-fit: cover;
+  height: 100%;
+  width: 100%;
 }
 
 .hover-parent1 {
@@ -220,6 +227,7 @@ h2 {
 
 /* セクション02 auto*/
 .top_menu {
+  margin: 0;
   grid-column: 1 / -1;
   grid-row: 3 / 4;
   display: grid;
@@ -286,7 +294,7 @@ h2 {
   text-decoration: none;
   text-align: center;
   color: #543900;
-  margin: -10px;
+  margin: 20px;
   padding: 0;
   border: 1px solid #543900;
   border-radius: 12px;
@@ -306,7 +314,7 @@ h2 {
 
 .sec02_twitter {
   grid-column: 1 / 4;
-  grid-row: 2 / -1;
+  grid-row: 2 / 3;
   background-color: #FFFDE6;
 }
 .sec02_twitter .twitter-timeline {
@@ -316,8 +324,8 @@ h2 {
 .top_works {
   grid-column: 4 / 10;
   grid-row: 2 / 3;
-  background-image: url(../images/top_images/works_winter.jpg);
-  background-size: cover;
+  margin: 0;
+  object-fit: cover;
 }
 .top_works h2 {
   display: inline-block;
@@ -391,6 +399,7 @@ h2 {
   grid-row: 3 / 4;
   margin-right: 18px;
   border: 2px solid #543900;
+  margin: 0;
   display: grid;
   grid-template-columns: auto auto;
   grid-template-rows: auto auto;
@@ -410,6 +419,7 @@ h2 {
   grid-row: 3 / 4;
   margin-left: 18px;
   border: 2px solid #543900;
+  margin: 0;
   display: grid;
   grid-template-columns: fr1 1fr;
   grid-template-rows: 1fr 1fr;
@@ -448,6 +458,7 @@ h2 {
   width: 800px;
   display: grid;
   justify-content: center;
+  margin: 0 auto !important;
 }
 
 .contact_title h2 {
@@ -499,16 +510,16 @@ h2 {
   display: inline-block;
   padding: 0.2em 2em;
   text-decoration: none;
-  background: #E0B6A9;
+  background: #332d2b;
   color: #fff;
-  border: solid 2px #E0B6A9;
+  border: solid 2px #332d2b;
   border-radius: 3px;
   transition: .4s;
   font-size: 1.5em;
 }
 .btn_contact input:hover {
   background: white;
-  color: #E0B6A9;
+  color: #332d2b;
 }
 
 /* 一番下　だっせんすんぜん */
@@ -579,6 +590,24 @@ figure.hover-parent:hover .hover-mask {
 /* 002. News
  * Newsのスタイルを定義します
  * ========================================================================== */
+.news_main {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr auto auto 500px;
+  margin: 0 var(--side) 30px;
+  --side: 20px;
+}
+
+.news_title {
+  grid-column: 1 / -1;
+  grid-row: 1;
+}
+.news_title h2 {
+  font-size: 46px;
+  margin: 30px;
+  font-family: 'Pangolin', cursive;
+}
+
 /* 003. About
  * Aboutのスタイルを定義します
  * ========================================================================== */
@@ -759,19 +788,8 @@ figure.hover-parent:hover .hover-mask {
 }
 
 /* ####### 画面の横幅が1260px以上 ###### */
-@media (mix-width: 1260px) {
-  .page {
-    --side:
-    calc((100vw - (960px + 260px)) / 2);
-  }
-}
 /* ####### 画面の横幅が1000px以上 ###### */
 @media screen and (max-width: 1000px) {
-  .top_page {
-    --side:
-    calc((100vw - 960px) / 2);
-  }
-
   .top_rouga1 h2 {
     font-size: 24px;
     font-weight: bold;

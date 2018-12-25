@@ -22,7 +22,7 @@ $(function(){
 });
 </script>
 </head>
-<body class="page">
+<body id="top" class="page">
 
 
 <header class="page-head">
@@ -55,37 +55,37 @@ $(function(){
 
 
 
-<main class="page-main news_main">
+<main class="page-main">
     <!-- メインを入れる -->
 
+<div class="wrap">
 
-
-<div class="news_top wrap">
-    <div>
+<div class="news_main">
+    <div class="news_title">
         <img src="images/news/test01.jpg" alt="">
-
     <h2>News</h2>
-</div>
-<h2>最新情報とお知らせ</h2>
-
-<section>
-    <h3>最新情報</h3>
-    <dl>
-        <dt>2018年12月31日</dt>
-        <dd>サイトリニューアルしました</dd>
-    </dl>
-</section>
-
-<section>
-<h3>お知らせ</h3>
-    <dl>
-        <dt>2018年12月27日</dt>
-        <dd>【募集】猫関連のハンドメイドイベントの情報を大募集中です。関東全般に行われる展示会や販売会に参加を考えています。絵画展やろう画の展示をさせていただける場所もお待ちしています。</dd>
-        <dt>20183月1日</dt>
-        <dd>【展示会】4月に横浜・赤レンガ倉庫で開催される「ねこらんまん展」に参加決定！</dd>
-    </dl>
-</section>
+    <h2>最新情報とお知らせ</h2>
     </div>
+
+    <section>
+        <h3>最新情報</h3>
+        <dl>
+            <dt>2018年12月31日</dt>
+            <dd>サイトリニューアルしました</dd>
+        </dl>
+    </section>
+
+    <section>
+        <h3>お知らせ</h3>
+        <dl>
+            <dt>2018年12月27日</dt>
+            <dd>【募集】猫関連のハンドメイドイベントの情報を大募集中です。関東全般に行われる展示会や販売会に参加を考えています。絵画展やろう画の展示をさせていただける場所もお待ちしています。</dd>
+            <dt>20183月1日</dt>
+            <dd>【展示会】4月に横浜・赤レンガ倉庫で開催される「ねこらんまん展」に参加決定！</dd>
+        </dl>
+    </section>
+</div>
+</div>
 </main>
 
 
@@ -115,13 +115,22 @@ $(function(){
 <!-- /.footer -->
 
 
+<!-- トップ戻るボタン -->
+<div class="pagetop_btn"><a href="#top"><img src="images/top_btn.png" alt="ページトップへ戻る"></a></div>
 
-<!-- ここにjqueryプラグイン -->
+<script src="js/smooth-scroll.polyfills.min.js"></script>
 <script>
+// レスポンシブでナビゲーションの表示非表示
 function myFunc() {
     document.querySelector('.page').classList.toggle('open');
 }
+
+// スムーススクロール topへ戻ったり、#へリンクでスクロール
+$(function(){
+var scroll = new SmoothScroll('a[href*="#"]');
+});
 </script>
+
 
 </body>
 </html>

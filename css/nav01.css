@@ -29,10 +29,6 @@ h2 {
 }
 
 /* ####### 画面の横幅が1024px以下の場合 ###### */
-.page * {
-  margin: 0;
-}
-
 .logo img {
   width: 200px;
   vertical-align: bottom;
