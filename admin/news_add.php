@@ -1,11 +1,10 @@
-<!-- <?php
+<?php
 require_once '../util.inc.php';
 require_once '../db.inc.php';
 
 $title = "";
 $message = "";
 $posted =date("Y-m-d");
-echo $posted;
 
 
 // キャンセルボタン
@@ -67,7 +66,8 @@ if(isset($_POST["add"])){
     }
 
 }
-?> -->
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>

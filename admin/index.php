@@ -1,4 +1,4 @@
-<!-- <?php
+<?php
 require_once '../util.inc.php';
 require_once '../db.inc.php';
 
@@ -18,7 +18,7 @@ catch (PDOException $e){
     echo $e -> getMessage();
 }
 
-?> -->
+?>
 
 
 <!DOCTYPE html>
@@ -26,7 +26,7 @@ catch (PDOException $e){
 <head>
 <meta charset="UTF-8">
 <title>最新情報・お知らせ一覧 | エフリエこうぼう管理</title>
-<link rel="stylesheet" href="css/admin.css">
+<link rel="stylesheet" href="/css/admin.css">
 </head>
 <body id="admin_index">
 <header>

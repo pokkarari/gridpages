@@ -63,7 +63,7 @@ $(function(){
     <nav class="page-nav">
         <ul class="top-nav">
             <li><a href="index.html">Top</a></li>
-            <li><a href="news.html">News</a></li>
+            <li><a href="news.php">News</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="http://blog.friekobo.com">Blog</a></li>
@@ -88,14 +88,14 @@ $(function(){
 
             <div class="news_body">
                 <dl>
-                    <dt>日にち<?php h($fmt); ?></dt>
-                    <dd><?php h($news["title"]); ?>
+                    <dt><p><?php h($fmt); ?>
+                    <?php h($news["title"]); ?>
                 <?php
                     $d = new DateTime($news["posted"]);
-                    $fmt = $d -> format("F j, Y")?><!-- タイトル -->
-                    </dd>
+                    $fmt = $d -> format("F j, Y")?></p>
+                </dt><!-- タイトル -->
                     <dd>
-                        <p>おしらせの内容<?php h($news["message"]); ?></p><!-- お知らせの中身 -->
+                        <p><?php h($news["message"]); ?></p><!-- お知らせの中身 -->
                     </dd>
                 </dl>
             </div>

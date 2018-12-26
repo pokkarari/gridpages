@@ -1,4 +1,4 @@
-<!-- <?php
+<?php
 require_once '../util.inc.php';
 require_once '../db.inc.php';
 // キャンセルボタン
@@ -36,7 +36,7 @@ catch (PDOException $e) {
     echo $e -> getMessage();
  }
 }
-?> -->
+?>
 
 <!DOCTYPE html>
 <html lang="ja">

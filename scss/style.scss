@@ -659,6 +659,13 @@ figure.hover-parent:hover .hover-mask {
 }
 .news_body {
   margin: 30px;
+    dt p{
+        border: 1px solid $mainFontColor2;
+    }
+  dd p{
+        border: 1px solid $mainFontColor2;
+
+  }
 }
 
 
