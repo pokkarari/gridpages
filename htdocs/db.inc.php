@@ -1,8 +1,8 @@
 <?php
 function db_init(){
-    $source = "mysql:host=localhost;dbname=crescent";
-    $dbuser = "sysuser";
-    $dbpass = "secret";
+    $source = "mysql:host=mysql134.phy.lolipop.lan;dbname=LAA0150954-dbfriekobo";
+    $dbuser = "LAA0150954";
+    $dbpass = "whonewsm8528";
 
     $pdo = new PDO($source,$dbuser,$dbpass);
 

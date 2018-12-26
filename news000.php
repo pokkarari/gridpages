@@ -1,4 +1,4 @@
-<!-- <?php
+<?php
 require_once 'util.inc.php';
 require_once 'db.inc.php';
 
@@ -20,7 +20,7 @@ try{
 catch(PDOException $e){
     echo $e -> getMessage();
 }
-?> -->
+?>
 
 
 <!DOCTYPE html>
@@ -49,7 +49,7 @@ $(function(){
 </head>
 
 
-<body id="top" class="page news_page">
+<body class="page">
 
 <header class="page-head">
     <div class="logo">
@@ -79,28 +79,30 @@ $(function(){
 <main class="page-main">
 
 <!-- row ここからがいるもの-->
-      <div class="news_main">
-        <div class="news_title">
-            <h2>News</h2>
-            <h3>最新情報・お知らせ</h3>
-        </div>
+      <div class="row">
       <?php foreach ($newsList as $news): ?>
+          <div class="media">
 
-            <div class="news_body">
-                <dl>
-                    <dt>日にち<?php h($fmt); ?></dt>
-                    <dd>タイトル<!-- <?php h($news["title"]); ?>
+            <a class="pull-left">
+            <?php if(isset($news["image"])): ?>
+              <img class="media-object" src="images/press/<?php h($news["image"]); ?>" height="64" width="64" alt="">
+            <?php else: ?>
+           <img class="media-object" src="images/press.png" height="64" width="64" alt="">
+            <?php endif; ?><!-- イメージのサムネイル -->
+            </a>
+
+            <div class="media-body">
+              <h4 class="media-heading">タイトル<?php h($news["title"]); ?>
                 <?php
                     $d = new DateTime($news["posted"]);
                     $fmt = $d -> format("F j, Y")
-                    ?> --></dd>
-                    <dd>
-                        <p>おしらせの内容<!-- <?php h($news["message"]); ?> --></p><!-- お知らせの中身 -->
-                    </dd>
-                </dl>
+                    ?>
+                <small>日にち<?php h($fmt); ?></small>
+              </h4>
+              おしらせの内容<?php h($news["message"]); ?><!-- お知らせの中身 -->
             </div>
-            <?php endforeach; ?>
-
+          </div>
+        <?php endforeach; ?>
     </div><!-- /row ここまでがいるもの-->
 
 
