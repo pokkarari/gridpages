@@ -152,7 +152,43 @@ h2 {
   opacity: 0.8;
 }
 
-/*--------------------------------------*/
+/* 000. 提出用トップ
+ * スタイルを定義します　のちに削除
+ * ========================================================================== */
+.kadai_main {
+  padding: 50px;
+  color: #543900;
+  background-color: #FFFDE6;
+}
+
+.kadai_text {
+  padding: 40px;
+  padding-bottom: 0;
+  border: 3px solid #ffc864;
+  border-radius: 20px;
+  background-color: #fff;
+}
+.kadai_text img {
+  width: 100%;
+  opacity: 0.5;
+}
+.kadai_text h3 {
+  font-size: 18px;
+  margin: 0;
+  margin-top: 30px;
+}
+.kadai_text p {
+  font-size: 20px;
+  margin: 0;
+}
+.kadai_text a {
+  text-decoration: none;
+  color: #543900;
+}
+
+/* 001. top
+ * topのスタイルを定義します
+ * ========================================================================== */
 /* main グリッド */
 .top-page {
   display: grid;

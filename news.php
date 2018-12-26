@@ -125,6 +125,7 @@ $(function(){
         <li><a href="https://twitter.com/friekobo/"><i class="fab fa-twitter"></i></a></li>
         <li><a href="https://www.facebook.com/friekobo/"><i class="fab fa-facebook-f"></i></a></li>
         <li><a href="https://www.instagram.com/friekobo/"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="https://friekobo.com/kadaifriekobo/index.php">●</a></li>
     </ul>
     <small>copyright &copy; 2018 FRiekobo</small>
 </footer>

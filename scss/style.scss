@@ -168,10 +168,44 @@ clear: both;
   opacity: 0.8;
 
 }
+/* 000. 提出用トップ
+ * スタイルを定義します　のちに削除
+ * ========================================================================== */
+.kadai_main {
+  padding:50px;
+  color: $mainFontColor;
+  background-color: $softyelColor2;
+}
+.kadai_text {
+  padding: 40px;
+  padding-bottom: 0;
+  border: 3px solid $orangeColor;
+  border-radius: 20px;
+  background-color: #fff;
+  img {
+    width: 100%;
+    opacity: 0.5;
+  }
+  h3 {
+    font-size: 18px;
+    margin: 0;
+    margin-top: 30px;
+  }
+  p {
+    font-size: 20px;
+    margin: 0;
+  }
+  a {
+
+      text-decoration: none;
+      color: $mainFontColor;
+  }
+}
 
 
-
-/*--------------------------------------*/
+/* 001. top
+ * topのスタイルを定義します
+ * ========================================================================== */
 
 /* main グリッド */
 
