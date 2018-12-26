@@ -26,8 +26,9 @@ catch (PDOException $e){
 <head>
 <meta charset="UTF-8">
 <title>最新情報・お知らせ一覧 | エフリエこうぼう管理</title>
-<link rel="stylesheet" href="/css/admin.css">
+<link rel="stylesheet" href="css/admin.css">
 </head>
+
 <body id="admin_index">
 <header>
   <div class="inner">
@@ -53,18 +54,22 @@ catch (PDOException $e){
       <tr>
         <td class="center"><?php h($news["posted"]); ?></td>
         <td>
-        <span class="title"><?php h($news["title"]); ?></span>
-        <?php h($news["message"]); ?>
+          <span class="title"><?php h($news["title"]); ?></span>
+          <?php h($news["message"]); ?>
         </td>
-       <?php else: ?>
-       <td class="center"><img src="../images/press.png" width="64" height="64" alt=""></td>
-        <?php endif; ?>
+<!--           <?php if(isset($news["image"])): ?>
+        <td class="center"><img src="../images/press/<?php h($news["image"]); ?>" width="64" height="64" alt="">
+        </td>
+        <?php else: ?>
+        <td class="center"><img src="../images/press.png" width="64" height="64" alt=""></td>
+        <?php endif; ?> -->
         <td class="center"><a href="news_edit.php?id=<?php h($news["id"]); ?>">編集</a></td>
         <td class="center"><a href="news_delete.php?id=<?php h($news["id"]); ?>">削除</a></td>
       </tr>
       <?php endforeach;?>
     </table>
   </main>
+</div>
   <footer>
     <p>copyright &copy; 2018 FRiekobo</p>
   </footer>

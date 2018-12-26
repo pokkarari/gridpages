@@ -90,6 +90,7 @@ $(function(){
                 <dl>
                     <dt><p><?php h($fmt); ?>
                     <?php h($news["title"]); ?>
+
                 <?php
                     $d = new DateTime($news["posted"]);
                     $fmt = $d -> format("F j, Y")?></p>
