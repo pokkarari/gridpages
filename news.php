@@ -89,9 +89,9 @@ $(function(){
             <div class="news_body">
                 <dl>
                     <dt><p><?php h($fmt); ?>
-                    <?php h($news["title"]); ?>
+                    <?php h($news["title"]); ?></p>
 
-                <?php
+                <p><?php
                     $d = new DateTime($news["posted"]);
                     $fmt = $d -> format("F j, Y")?></p>
                 </dt><!-- タイトル -->

@@ -54,18 +54,23 @@ h2 {
   top: 10px;
 }
 .menu_title h2 {
+  text-decoration: none;
   font-family: 'Pangolin', cursive;
-  z-index: 10;
   color: #543900;
   font-size: 42px;
   padding: 10px 0 10px 10px;
   margin: 0;
+  z-index: 10;
 }
 .menu_title p {
   color: #543900;
   margin: -5px 10px -10px 20px;
   font-size: 14px;
   line-height: 1.8rem;
+}
+.menu_title a {
+  text-decoration: none;
+  color: #543900;
 }
 
 .imgUp {
@@ -408,6 +413,10 @@ h2 {
   font-size: 46px;
   font-weight: bold;
 }
+.top_rouga1 a {
+  text-decoration: none;
+  color: #fff;
+}
 
 .top_rouga2 {
   grid-column: 3;
@@ -420,8 +429,14 @@ h2 {
   color: #fff;
 }
 .top_rouga2 h2 {
+  margin-left: 20px;
   font-size: 34px;
   font-weight: bold;
+  color: #fff;
+}
+.top_rouga2 a {
+  text-decoration: none;
+  color: #fff;
 }
 
 .sec02_img02 {
@@ -438,7 +453,7 @@ h2 {
   margin: 0;
   display: grid;
   grid-template-columns: auto auto;
-  grid-template-rows: auto auto;
+  grid-template-rows: 100px 100px;
 }
 .top_blog img {
   grid-column: 1 / 3;
@@ -650,21 +665,19 @@ figure.hover-parent:hover .hover-mask {
   margin: 30px;
 }
 .news_body dt p {
-  border: 1px solid #332d2b;
-}
-.news_body dd p {
-  border: 1px solid #332d2b;
+  font-weight: bold;
 }
 
 /* 003. About
  * Aboutのスタイルを定義します
  * ========================================================================== */
 .about_main {
+  --side: 20px;
+  color: #332d2b;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 1fr auto auto 500px;
   margin: 0 var(--side) 30px;
-  --side: 20px;
 }
 
 .about_title {
@@ -672,6 +685,7 @@ figure.hover-parent:hover .hover-mask {
   grid-row: 1;
 }
 .about_title h2 {
+  color: #543900;
   font-size: 46px;
   margin: 30px;
   font-family: 'Pangolin', cursive;
@@ -691,17 +705,7 @@ figure.hover-parent:hover .hover-mask {
   grid-row: 1;
   font-size: 34px;
   font-weight: normal;
-}
-.conscept_text .concept_line:after {
-  grid-column: 1 / 3;
-  grid-row: 2;
-  content: " ";
-  display: block;
-  border: 8px solid #ffc864;
-}
-.conscept_text p {
-  grid-column: 2 / 3;
-  grid-row: 3;
+  border-bottom: 8px solid #ffc864;
 }
 
 .concept_img {
@@ -710,19 +714,24 @@ figure.hover-parent:hover .hover-mask {
 }
 .concept_img img {
   width: 100%;
-  margin: 0 auto;
 }
 
 .profile {
   grid-column: 1 / -1;
   grid-row: 3;
 }
+.profile h3 {
+  font-size: 46px;
+}
+.profile img {
+  width: 300px;
+}
 
 .about_message {
   grid-column: 1 / -1;
   grid-row: 4;
   margin-top: 20px;
-  background-image: url(../images/top/top_hand.png);
+  background-image: url(../images/about/kokorokomete.jpg);
   background-position: center right;
 }
 .about_message p {
@@ -730,8 +739,8 @@ figure.hover-parent:hover .hover-mask {
   text-align: center;
   margin-top: 180px;
   font-size: 32px;
-  color: #ffc864;
-  text-shadow: 2px 2px 6px #ffc864;
+  color: #543900;
+  text-shadow: 2px 2px 8px #ffc864;
 }
 
 /* 004. Gallery
@@ -808,12 +817,16 @@ figure.hover-parent:hover .hover-mask {
   margin: 0;
 }
 
+.gallery_subnav a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #332d2b;
+}
 .gallery_subnav ul {
   list-style: none;
   margin-bottom: 30px;
 }
 .gallery_subnav li {
-  list-style: none;
   display: inline-block;
   color: #332d2b;
   padding: 10px;
@@ -833,6 +846,13 @@ figure.hover-parent:hover .hover-mask {
   border: 1px solid #FFAD00;
   text-align: center;
   margin: 30px;
+}
+
+/* 007. wsm
+ * ｗｓｍのスタイルを定義します
+ * ========================================================================== */
+.WSM_img img {
+  width: 300px;
 }
 
 /* ####### 画面の横幅が1260px以上 ###### */
